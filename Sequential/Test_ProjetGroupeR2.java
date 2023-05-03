@@ -1,7 +1,5 @@
-package ProjetGroupe_sequential;
+
 import java.util.Random;
-import Util.Utilities;
-import eventb_prelude.*;
 
 public class Test_ProjetGroupeR2{
 

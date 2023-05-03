@@ -1,4 +1,4 @@
-package eventb_prelude;
+
 
 
 /** representation of the EventB type INT as a BSet
