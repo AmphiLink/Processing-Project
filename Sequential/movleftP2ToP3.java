@@ -1,7 +1,3 @@
-package ProjetGroupe_sequential; 
-
-import eventb_prelude.*;
-import Util.Utilities;
 
 public class movleftP2ToP3{
 	/*@ spec_public */ private ProjetGroupeR2 machine; // reference to the machine 

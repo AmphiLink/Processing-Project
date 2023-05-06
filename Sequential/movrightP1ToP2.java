@@ -1,7 +1,4 @@
-package ProjetGroupe_sequential; 
 
-import eventb_prelude.*;
-import Util.Utilities;
 
 public class movrightP1ToP2{
 	/*@ spec_public */ private ProjetGroupeR2 machine; // reference to the machine 
