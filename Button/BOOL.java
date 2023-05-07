@@ -1,4 +1,4 @@
-package eventb_prelude;
+
 
 /** a class to represent type BOOL as a set in JML 
  * @author Tim Wahls & Nestor Catano & Victor Rivera

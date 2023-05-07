@@ -1,6 +1,5 @@
-package Util;
+
 import java.util.Random;
-import eventb_prelude.*;
 
 public class Utilities {
 	//Class Utilities implements the Bakery Algorithm and

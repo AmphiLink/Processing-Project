@@ -1,6 +1,4 @@
-package ProjetGroupe_sequential; 
 
-import eventb_prelude.*;
 import Util.Utilities;
 
 public class exit_P3{

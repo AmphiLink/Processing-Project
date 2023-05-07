@@ -1,6 +1,4 @@
-package ProjetGroupe_sequential;
 
-import eventb_prelude.*;
 import Util.*;
 //@ model import org.jmlspecs.models.JMLObjectSet;
 import java.util.concurrent.locks.Lock;

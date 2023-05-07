@@ -1,4 +1,3 @@
-package eventb_prelude;
 
 import java.util.Iterator;
 
