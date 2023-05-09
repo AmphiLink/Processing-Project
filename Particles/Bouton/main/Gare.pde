@@ -27,4 +27,24 @@ void draw() {
     ellipse(coordSGare[0], coordSGare[1], 25, 25);
   }
 
+int exitGare(int[] gare, int index){
+    int res = 0;
+    if(gare[index] != 0){
+      if(gare[index] == 2){
+        res = 2;
+      }
+      if(gare[index] == 1){
+        res = 1;
+      }
+      gare[index] = 0;
+    }
+    return res;
+  }
+
+  void enterGare(int[] gare, int index, int train){
+    if(gare[index] != 0){
+      gare[index] = train;
+    }
+  }
+
 }
