@@ -1,5 +1,4 @@
-/*<<<<<<< HEAD
-public void setup(){
+/*public void setup(){
   size(800,800);
   
   strokeWeight(2);
@@ -65,8 +64,7 @@ void draw(){
   
   noFill();
   stroke(#D3D8DB);
-}
-=======*/
+}*/
   public final float BASE_RADIUS = 360;
   Gare gares = new Gare();
 

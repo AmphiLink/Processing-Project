@@ -15,16 +15,16 @@ class Gare{
 
 void draw() {
     fill(255, 0, 0); // rouge
-    ellipse(coordGare1[0], coordGare1[1], 50, 50);
+    buttonlight(coordGare1[0],coordGare1[1],50);
     
     fill(0, 255, 0); // vert
-    ellipse(coordGare2[0], coordGare2[1], 50, 50);
+    buttonlight(coordGare2[0],coordGare2[1],50);
     
     fill(0, 0, 255); // bleu
-    ellipse(coordGare3[0], coordGare3[1], 50, 50);
+    buttonlight(coordGare3[0],coordGare3[1],50);
     
     fill(255); // blanc
-    ellipse(coordSGare[0], coordSGare[1], 25, 25);
+    buttonTurnout(coordSGare[0],coordSGare[1],25);
   }
 
 int exitGare(int[] gare, int index){

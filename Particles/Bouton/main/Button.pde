@@ -23,7 +23,7 @@ public void buttonStation(int getX, int getY, int getHeight, int getWidth){
   
 }
 
-boolean overlight(int x, int y, int diameter) {
+boolean overCircle(int x, int y, int diameter) {
   float disX = x - mouseX;
   float disY = y - mouseY;
   if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
@@ -37,11 +37,37 @@ public void buttonlight(int getX, int getY, int diameter){
   pushStyle();
   
   
-  if(overlight(getX, getY, diameter)){
+  if(overCircle(getX, getY, diameter)){
     fill(255, 80);
   }
    
   ellipse(getX, getY, diameter, diameter);
+  noStroke();
+  
+  
+  popStyle();
+  
+}
+
+boolean reversed(){
+  if (mouseButton == LEFT){ 
+    return true;
+  }else{
+    return false;
+  }
+  
+}
+public void buttonTurnout(int x, int y, int diameter){
+  pushStyle();
+  
+  
+  if(overCircle(x, y, diameter)){
+    if(reversed()){
+      x = x + 20;
+    }
+  }
+   
+  ellipse(x, y, diameter, diameter);
   noStroke();
   
   
