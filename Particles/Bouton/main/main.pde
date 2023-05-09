@@ -1,36 +1,40 @@
-public final float BASE_RADIUS = 360;
-
 public void setup(){
   size(800,800);
   
   strokeWeight(2);
-
+  
+  ellipseMode(CENTER);
 }
 
 
 
 void draw(){
   background(39, 95, 134);
+
   //arc (400 , 450 , 700 , 700 , PI, PI*2);
-  
   //Gp1
-  button(50, 400, 50, 25);
-  button(50, 450, 50, 25);
-  button(50, 500, 50, 25);
-  button(50, 550, 50, 25);
+  buttonStation(50, 400, 50, 25);
+  buttonStation(50, 450, 50, 25);
+  buttonStation(50, 500, 50, 25);
+  buttonStation(50, 550, 50, 25);
   
   //G2
-  button(350, 200, 50, 25);
-  button(350, 250, 50, 25);
-  button(350, 300, 50, 25);
-  button(350, 350, 50, 25);
+  buttonStation(350, 175, 50, 25);
+  buttonStation(350, 225, 50, 25);
+  buttonStation(350, 275, 50, 25);
+  buttonStation(350, 325, 50, 25);
   
   //G3
-  button(700, 400, 50, 25);
-  button(700, 450, 50, 25);
-  button(700, 500, 50, 25);
-  button(700, 550, 50, 25);
+  buttonStation(700, 400, 50, 25);
+  buttonStation(700, 450, 50, 25);
+  buttonStation(700, 500, 50, 25);
+  buttonStation(700, 550, 50, 25);
   
+  //GS
+  buttonStation(350, 575, 50, 25);
+  buttonStation(350, 650, 50, 25);
+  
+  buttonlight(20, 20, 50);
   
   line(50, 425, 100, 425);
   
