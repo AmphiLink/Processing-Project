@@ -1,3 +1,4 @@
+/*<<<<<<< HEAD
 public void setup(){
   size(800,800);
   
@@ -65,3 +66,28 @@ void draw(){
   noFill();
   stroke(#D3D8DB);
 }
+=======*/
+  public final float BASE_RADIUS = 360;
+  Gare gares = new Gare();
+
+
+
+  public void setup(){
+    size(800,800);
+    
+    strokeWeight(2);
+
+  }
+
+
+
+  void draw(){
+    background(39, 95, 134);
+    //arc (400 , 450 , 700 , 700 , PI, PI*2);
+    
+    gares.draw();
+
+    
+    
+  }
+//>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c
