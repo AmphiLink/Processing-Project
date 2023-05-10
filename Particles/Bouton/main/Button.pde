@@ -1,5 +1,4 @@
 boolean circleOver = false;
-public enum LightState {GREEN, RED}
 
 boolean overStation(int x, int y, int getHeight, int getWidth) {
   if ((mouseX > x && mouseX < x + getHeight) && (mouseY > y && mouseY < y + getWidth)){
