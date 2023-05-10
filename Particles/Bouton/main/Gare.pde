@@ -4,7 +4,7 @@ public class Gare{
   int[] pgare3 = new int[4];
   int[] sgare = new int[2];
 
-  public int[] coordGare1 = {500, 100}; 
+  int[] coordGare1 = {500, 100}; 
   int[] coordGare2 = {900, 400}; 
   int[] coordSGare = {500, 700}; 
   int[] coordGare3 = {100, 400};
@@ -46,6 +46,13 @@ void draw() {
   
   }
 
+void plateformesDraw(int x, int y, int[] gare){
+  int espace = 0;
+  for(int i = 0; i < gare.length; ++i){
+    line(x, y + espace, x + 20, y + espace);
+    espace = espace + 10;
+  }
+}
 
 int exitGare(int[] gare, int index){
     int res = 0;
