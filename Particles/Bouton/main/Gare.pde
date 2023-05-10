@@ -27,7 +27,6 @@ void draw(int x, int y, int[] gare) {
 
 void plateformesDraw(int x, int y, int[] gare){
   int espace = 0;
-  println(gare[1]);
   for(int i = 0; i < gare.length; i++){
     if(gare[i] == 0){
       strokeWeight(4);
@@ -44,7 +43,7 @@ void plateformesDraw(int x, int y, int[] gare){
       strokeWeight(1);
       rect(x, y + espace, 20, 5);
     }
-    espace = espace + 50;
+    espace = espace + 36;
   }
 }
 

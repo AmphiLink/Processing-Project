@@ -1,5 +1,32 @@
-class Feux{
-  color[] P1F = new color[4];
+public class Feux {
+
+  private boolean estVert; // true = vert -- false == rouge 
+  private float x;
+  private float y;
+  private float angle;
+
+  public Feux(float x, float y){
+    this.x = x;
+    this.y = y;
+    estVert = true;
+  }
+
+
+  public void draw() {
+    stroke(0);
+    strokeWeight(1);
+    fill(estVert == true ? #20f020 : #f02020);
+    ellipse(x, y, 10, 10);
+  }
+}
+  
+  
+  
+  
+  
+  
+  
+  /*color[] P1F = new color[4];
   color[] P2F = new color[8];
   color[] P3F = new color[4];
   color[] S1F = new color[4];
@@ -11,12 +38,27 @@ class Feux{
   color green = color(0, 255, 0);
   color red = color(225, 0, 0);
   
+
+
+
   void modifyFeux(color[] feu, int index){
     if(feu[index] == red){feu[index] = green;}
     else if(feu[index] == green){feu[index] = red;}
   };
 
 
+  void feuDraw(int x, int y, color[] feu, int index){
+    for(int i = 0; i<feu.length;i++){
+      if(feu[i] == green){
+        fill(green);
+        circle(x, y, 10);
+      }
+      else if (feu[i] == red){
+        fill(red);
+        circle(x, y, 10);
+      }
+    }
+  }
 
+  */
 
-}

@@ -65,9 +65,7 @@ void draw(){
   noFill();
   stroke(#D3D8DB);
 }*/
-  Gare gares = new Gare();
-  Track tracks = new Track();
-  
+
   /*
   int[] pgare1 = new int[4];
   int[] pgare2 = new int[4];
@@ -79,11 +77,24 @@ void draw(){
   int[] coordSGare = {500, 700}; 
   int[] coordGare3 = {100, 400};
   */
-
-
+  Gare gares = new Gare();
+  Track tracks = new Track();
+  
+  public Feux[] feux;
   public void setup(){
+
     size(1000,800);
     strokeWeight(2);  
+
+
+
+    feux = new Feux[]{
+      new Feux(50,50),
+      new Feux(200,300),
+      new Feux(150,350)
+    };
+
+
   }
 
 
@@ -101,7 +112,9 @@ void draw(){
     gares.draw(gares.coordGare3[0], gares.coordGare3[1], gares.pgare3);
     gares.plateformesDraw(gares.coordGare3[0] - 60, gares.coordGare3[1] - 50, gares.pgare3);
 
-    
+    for ( Feux feu : feux){
+      feu.draw();
+    }
     
   }
 //>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c
