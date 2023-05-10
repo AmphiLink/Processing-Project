@@ -65,7 +65,6 @@ void draw(){
   noFill();
   stroke(#D3D8DB);
 }*/
-  public final float BASE_RADIUS = 360;
   Gare gares = new Gare();
   Track tracks = new Track();
 
@@ -75,6 +74,7 @@ void draw(){
     
     strokeWeight(2);
 
+    
   }
 
 

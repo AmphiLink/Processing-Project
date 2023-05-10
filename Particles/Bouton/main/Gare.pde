@@ -1,10 +1,10 @@
-class Gare{
+public class Gare{
   int[] pgare1 = new int[4];
   int[] pgare2 = new int[4];
   int[] pgare3 = new int[4];
   int[] sgare = new int[2];
 
-  int[] coordGare1 = {500, 100}; 
+  public int[] coordGare1 = {500, 100}; 
   int[] coordGare2 = {900, 400}; 
   int[] coordSGare = {500, 700}; 
   int[] coordGare3 = {100, 400};
@@ -23,6 +23,27 @@ void draw() {
     
     fill(0); 
     rect(coordSGare[0] - 50, coordSGare[1] - 50, 100, 100);
+
+   strokeWeight(4);
+    stroke(255);
+    // Gare 1
+    line(coordGare1[0]-20, coordGare1[1]-50, coordGare1[0]+20, coordGare1[1]-50);
+    line(coordGare1[0]-20, coordGare1[1]-20, coordGare1[0]+20, coordGare1[1]-20);
+    line(coordGare1[0]-20, coordGare1[1]+20, coordGare1[0]+20, coordGare1[1]+20);
+    line(coordGare1[0]-20, coordGare1[1]+50, coordGare1[0]+20, coordGare1[1]+50);
+    
+    // Gare 2
+    line(coordGare2[0]+20, coordGare2[1]-50, coordGare2[0]+60, coordGare2[1]-50);
+    line(coordGare2[0]+20, coordGare2[1]-20, coordGare2[0]+60, coordGare2[1]-20);
+    line(coordGare2[0]+20, coordGare2[1]+20, coordGare2[0]+60, coordGare2[1]+20);
+    line(coordGare2[0]+20, coordGare2[1]+50, coordGare2[0]+60, coordGare2[1]+50);
+    
+    // Gare 3
+    line(coordGare3[0]-60, coordGare3[1]-50, coordGare3[0]-20, coordGare3[1]-50);
+    line(coordGare3[0]-60, coordGare3[1]-20, coordGare3[0]-20, coordGare3[1]-20);
+    line(coordGare3[0]-60, coordGare3[1]+20, coordGare3[0]-20, coordGare3[1]+20);
+    line(coordGare3[0]-60, coordGare3[1]+50, coordGare3[0]-20, coordGare3[1]+50);
+  
   }
 
 
