@@ -73,15 +73,39 @@ void draw(){
   int[] pgare3 = {2, 0, 2, 0};
   int[] sgare = {0, 0, 0, 0};
   
+
+  /*
+  int[] pgare1 = new int[4];
+  int[] pgare2 = new int[4];
+  int[] pgare3 = new int[4];
+  int[] sgare = new int[2];
+
   int[] coordGare1 = {500, 100}; 
   int[] coordGare2 = {900, 400}; 
   int[] coordSGare = {500, 700}; 
   int[] coordGare3 = {100, 400};
 
 
+  */
+  Gare gares = new Gare();
+  Track tracks = new Track();
+  
+  public Feux[] feux;
   public void setup(){
+
     size(1000,800);
     strokeWeight(2);  
+
+
+
+
+    feux = new Feux[]{
+      new Feux(50,50),
+      new Feux(200,300),
+      new Feux(150,350)
+    };
+
+
   }
 
 
@@ -102,5 +126,12 @@ void draw(){
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
     gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 60, sgare);
     
+    gares.draw(gares.coordGare3[0], gares.coordGare3[1], gares.pgare3);
+    gares.plateformesDraw(gares.coordGare3[0] - 60, gares.coordGare3[1] - 50, gares.pgare3);
+
+    for ( Feux feu : feux){
+      feu.draw();
+    }
+  
   }
 //>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c
