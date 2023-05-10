@@ -67,14 +67,24 @@ void draw(){
 }*/
   Gare gares = new Gare();
   Track tracks = new Track();
+  
+  /*
+  int[] pgare1 = new int[4];
+  int[] pgare2 = new int[4];
+  int[] pgare3 = new int[4];
+  int[] sgare = new int[2];
+
+  int[] coordGare1 = {500, 100}; 
+  int[] coordGare2 = {900, 400}; 
+  int[] coordSGare = {500, 700}; 
+  int[] coordGare3 = {100, 400};
+  */
 
 
   public void setup(){
     size(1000,800);
     
-    strokeWeight(2);
-
-    
+    strokeWeight(2);  
   }
 
 
@@ -83,7 +93,14 @@ void draw(){
     background(39, 95, 134);
     //arc (400 , 450 , 700 , 700 , PI, PI*2);
     tracks.draw();
-    gares.draw();
+    gares.draw(gares.coordGare1[0], gares.coordGare1[1], gares.pgare1);
+    gares.plateformesDraw(gares.coordGare1[0] - 20, gares.coordGare1[1] - 50, gares.pgare1);
+    
+    gares.draw(gares.coordGare2[0], gares.coordGare2[1], gares.pgare2);
+    gares.plateformesDraw(gares.coordGare2[0] + 20, gares.coordGare2[1] - 50, gares.pgare2);
+    
+    gares.draw(gares.coordGare3[0], gares.coordGare3[1], gares.pgare3);
+    gares.plateformesDraw(gares.coordGare3[0] - 60, gares.coordGare3[1] - 50, gares.pgare3);
 
     
     
