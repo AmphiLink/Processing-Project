@@ -88,6 +88,7 @@ void draw(){
 
 
 
+
     feux = new Feux[]{
       new Feux(50,50),
       new Feux(200,300),
@@ -115,6 +116,6 @@ void draw(){
     for ( Feux feu : feux){
       feu.draw();
     }
-    
+  
   }
 //>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c
