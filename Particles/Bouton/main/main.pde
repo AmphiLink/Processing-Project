@@ -71,7 +71,7 @@ void draw(){
 
 
   public void setup(){
-    size(800,800);
+    size(1000,800);
     
     strokeWeight(2);
 

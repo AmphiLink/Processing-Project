@@ -4,10 +4,10 @@ class Gare{
   int[] pgare3 = new int[4];
   int[] sgare = new int[2];
 
-  int[] coordGare1 = {400, 100}; 
-  int[] coordGare2 = {650, 400}; 
-  int[] coordSGare = {400, 700}; 
-  int[] coordGare3 = {150, 400};
+  int[] coordGare1 = {500, 100}; 
+  int[] coordGare2 = {900, 400}; 
+  int[] coordSGare = {500, 700}; 
+  int[] coordGare3 = {100, 400};
 
 
 
