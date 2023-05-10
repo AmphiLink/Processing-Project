@@ -46,9 +46,10 @@ void draw() {
   
   }
 
+/*
 void plateformesDraw(int x, int y, int[] gare){
   int espace = 0;
-  for(int i = 0; i < gare.length; ++i){
+  for(int i = 0; i < gare.length; i++){
     line(x, y + espace, x + 20, y + espace);
     espace = espace + 10;
   }
@@ -67,6 +68,7 @@ int exitGare(int[] gare, int index){
     }
     return res;
   }
+  */
 
   void enterGare(int[] gare, int index, int train){
     if(gare[index] != 0){
