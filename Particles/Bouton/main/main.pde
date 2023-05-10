@@ -67,7 +67,7 @@ void draw(){
 }*/
   public final float BASE_RADIUS = 360;
   Gare gares = new Gare();
-
+  Track tracks = new Track();
 
 
   public void setup(){
@@ -82,7 +82,7 @@ void draw(){
   void draw(){
     background(39, 95, 134);
     //arc (400 , 450 , 700 , 700 , PI, PI*2);
-    
+    tracks.draw();
     gares.draw();
 
     

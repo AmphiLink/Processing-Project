@@ -5,27 +5,26 @@ class Gare{
   int[] sgare = new int[2];
 
   int[] coordGare1 = {400, 100}; 
-  int[] coordGare2 = {550, 400}; 
-  int[] coordGare3 = {400, 700}; 
-  int[] coordSGare = {250, 400};
-
+  int[] coordGare2 = {650, 400}; 
+  int[] coordSGare = {400, 700}; 
+  int[] coordGare3 = {150, 400};
 
 
 
 
 void draw() {
-    fill(255, 0, 0); // rouge
-    buttonlight(coordGare1[0],coordGare1[1],50);
+    fill(150); 
+    strokeWeight(1);
+    rect(coordGare1[0] - 75, coordGare1[1] - 75, 150, 150);
     
-    fill(0, 255, 0); // vert
-    buttonlight(coordGare2[0],coordGare2[1],50);
+    rect(coordGare2[0] - 75, coordGare2[1] - 75, 150, 150);
     
-    fill(0, 0, 255); // bleu
-    buttonlight(coordGare3[0],coordGare3[1],50);
+    rect(coordGare3[0] - 75, coordGare3[1] - 75, 150, 150);
     
-    fill(255); // blanc
-    buttonTurnout(coordSGare[0],coordSGare[1],25);
+    fill(0); 
+    rect(coordSGare[0] - 50, coordSGare[1] - 50, 100, 100);
   }
+
 
 int exitGare(int[] gare, int index){
     int res = 0;
