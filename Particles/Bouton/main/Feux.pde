@@ -15,12 +15,23 @@ public class Feux {
   public void draw() {
     stroke(0);
     strokeWeight(1);
-    fill(estVert == true ? #20f020 : #f02020);
+  if (estVert == true) {
+    fill(#20f020);
+  } else {
+    fill(#FF0000);
+  }
     ellipse(x, y, 10, 10);
   }
 }
   
-  
+  public void modifyFeux(Feux feux){
+    if (feux.estVert == true) {
+      feux.estVert = false;
+    } else {
+      feux.estVert = true;
+    }
+  }
+
   
   
   
