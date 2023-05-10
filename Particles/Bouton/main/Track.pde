@@ -10,9 +10,9 @@ class Track {
     stroke(255); 
     strokeWeight(4); 
 
-    line(gare.coordGare1[0]+75, gare.coordGare1[1], gare.coordGare2[0]-75, gare.coordGare2[1]);
-    line(gare.coordGare1[0]-75, gare.coordGare1[1], gare.coordGare3[0]+75, gare.coordGare3[1]);
-    line(gare.coordSGare[0]-50, gare.coordSGare[1], gare.coordGare3[0]+75, gare.coordGare3[1]);
-    line(gare.coordGare2[0]-75, gare.coordGare2[1], gare.coordSGare[0], gare.coordSGare[1]+50);
+    line(coordGare1[0]+75, coordGare1[1], coordGare2[0]-75, coordGare2[1]);
+    line(coordGare1[0]-75, coordGare1[1], coordGare3[0]+75, coordGare3[1]);
+    line(coordSGare[0]-50, coordSGare[1], coordGare3[0]+75, coordGare3[1]);
+    line(coordGare2[0]-75, coordGare2[1], coordSGare[0], coordSGare[1]+50);
   }
 }
