@@ -94,9 +94,6 @@ void draw(){
     size(1000,800);
     strokeWeight(2);  
 
-
-
-
     feux = new Feux[]{
       // Gare 1 - en haut au milieu 
       new Feux(coordGare1[0]-29, coordGare1[1]-60), // feu1, gare 1 plus haut gauche 
@@ -132,7 +129,11 @@ void draw(){
     
 
     aiguillages = new Aiguillage[]{
-      new Aiguillage(100,100)
+
+      // SGare 
+      new Aiguillage(coordSGare[0]-70,coordSGare[1]-20,false), // aiguillage13, gauche
+      new Aiguillage(coordSGare[0]+50,coordSGare[1]-20,true), // aiguillage13, droite
+
     };
 
 

@@ -1,12 +1,14 @@
 public class Aiguillage{
   
-  private boolean versDroite;
-  private float x;
-  private float y;
+  boolean versDroite;
+  float x;
+  float y;
+  boolean reversed;
 
-  public Aiguillage(float x,float y){
+  public Aiguillage(float x,float y,boolean reversed){
     this.x = x;
     this.y = y;
+    this.reversed = reversed;
     versDroite = true;
   }
 
@@ -27,6 +29,10 @@ public void draw(){
     angle = PI/4; // Si versDroite est true, angle de 45 degrés vers le haut
   } else {
     angle = -PI/4; // Si versDroite est false, angle de 45 degrés vers le bas
+  }
+
+  if (reversed) {
+    angle += PI;
   }
   
   stroke(0);
