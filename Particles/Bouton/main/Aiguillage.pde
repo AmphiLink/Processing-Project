@@ -11,34 +11,29 @@ public class Aiguillage{
     this.reversed = reversed;
     versDroite = true;
   }
-public void draw(){
+  public void switch_(){
+    versDroite = !versDroite;
+  }
+  public void draw(){
+    
+    float length = 25;
+    float angle;
   
-  float length = 25;
-  float angle;
-
-  if(versDroite){
-    angle = PI/4; // Si versDroite est true, angle de 45 degrés vers le haut
-  } else {
-    angle = -PI/4; // Si versDroite est false, angle de 45 degrés vers le bas
-  }
-
-  if (reversed) {
-    angle += PI;
-  }
-  
-  stroke(0);
-  strokeWeight(2);
-  stroke(#FFFFFF); 
-  line(x,y,x + cos(angle) * length,y + sin(angle) * length);
-  }
-
-
-  }
-
-public void modifyAiguillage(Aiguillage aiguillages){
-    if(aiguillages.versDroite == true){
-      aiguillages.versDroite = false;
+    if(versDroite){
+      angle = PI/4; // Si versDroite est true, angle de 45 degrés vers le haut
     } else {
-      aiguillages.versDroite = true;
+      angle = -PI/4; // Si versDroite est false, angle de 45 degrés vers le bas
     }
-}
+  
+    if (reversed) {
+      angle += PI;
+    }
+   
+    stroke(0);
+    strokeWeight(2);
+    stroke(#FFFFFF); 
+    line(x,y,x + cos(angle) * length,y + sin(angle) * length);
+   }
+
+
+  }

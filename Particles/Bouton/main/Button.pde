@@ -24,6 +24,21 @@ public void buttonStation(int getX, int getY, int getHeight, int getWidth){
   
 }
 
+void mouseReleased(){
+    for(Feux feu : feux){
+      update(feu.x, feu.y, diameterLight, feu.estVert);
+      if(circleOver){
+        feu.switch_();
+      }
+    }
+    for(Aiguillage aiguillage : aiguillages){
+      update(aiguillage.x, aiguillage.y, diameterLight, aiguillage.versDroite);
+      if(circleOver){
+        aiguillage.switch_();
+      }
+    }
+}
+
 boolean overCircle(float x, float y, int diameter) {
   float disX = x - mouseX;
   float disY = y - mouseY;

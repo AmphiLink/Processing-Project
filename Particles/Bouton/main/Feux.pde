@@ -1,14 +1,7 @@
 
 int diameterLight = 15;
 
-void mouseReleased(){
-    for(Feux feu : feux){
-      update(feu.x, feu.y, diameterLight, feu.estVert);
-      if(circleOver){
-        feu.switch_();
-      }
-    }
-}
+
 public class Feux {// true = vert -- false == rouge
   private float x;
   private float y;
@@ -35,7 +28,8 @@ public class Feux {// true = vert -- false == rouge
       fill(#FF0000);
     }
     
-    if(estVert && overCircle(x, y, diameterLight
+    if(estVert && overCircle(x, y, diameterLight)){
+       fill(#20f020, 150);
     }else if (overCircle(x, y, diameterLight)){
        fill(#FF0000, 150);
     }
