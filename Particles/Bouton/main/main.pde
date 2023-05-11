@@ -7,7 +7,7 @@
   int[] sgare = {1, 1};
   
 
-  int[] P1ToP2 = {1, 1};
+  int[] P1ToP2 = {1, 1};  
   int[] P2ToP3 = {1, 1};
   int[] P1ToS1 = {1, 1};
   int[] S1ToP3 = {1, 1};
