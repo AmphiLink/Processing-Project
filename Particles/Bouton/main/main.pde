@@ -70,7 +70,7 @@ void draw(){
   
   int[] pgare1 = {1, 0, 1, 0};
   int[] pgare2 = {0, 0, 1, 0};
-  int[] pgare3 = {2, 0, 2, 0};
+  int[] pgare3 = {0, 0, 0, 0};
   int[] sgare = {0, 1};
   
 
@@ -130,8 +130,6 @@ void draw(){
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
     gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 60, sgare);
     
-    gares.draw(coordGare3[0], coordGare3[1], pgare3);
-    gares.plateformesDraw(coordGare3[0] - 60, coordGare3[1] - 50, pgare3);
 
     for ( Feux feu : feux){
       feu.draw();
