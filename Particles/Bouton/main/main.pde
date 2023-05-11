@@ -64,13 +64,17 @@
       new Aiguillage(coordGare1[0]+65,coordGare1[1]-4,true),
       new Aiguillage(coordGare1[0]+18,coordGare1[1]-30,true),
       new Aiguillage(coordGare1[0]+18,coordGare1[1]+35,true),
-
+      // Gare 2
+      new Aiguillage(coordGare2[0]+71,coordGare2[1]-4,true),
+      new Aiguillage(coordGare2[0]+45,coordGare2[1]-30,true),
+      new Aiguillage(coordGare2[0]+45,coordGare2[1]+35,true),
+      new Aiguillage(coordGare2[0]-71,coordGare2[1]-4,false),
+      new Aiguillage(coordGare2[0]-50,coordGare2[1]-30,false),
+      new Aiguillage(coordGare2[0]-50,coordGare2[1]+35,false),
       // Gare 3 
       new Aiguillage(coordGare3[0]-65,coordGare3[1]-4,false),
       new Aiguillage(coordGare3[0]-20,coordGare3[1]-30,false),
       new Aiguillage(coordGare3[0]-20,coordGare3[1]+35,false),
-
-
       // SGare 
       new Aiguillage(coordSGare[0]-72,coordSGare[1]-20,false), // aiguillage13, gauche
       new Aiguillage(coordSGare[0]+52,coordSGare[1]-20,true), // aiguillage13, droite
