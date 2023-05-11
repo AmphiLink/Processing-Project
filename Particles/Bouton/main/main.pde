@@ -98,9 +98,36 @@ void draw(){
 
 
     feux = new Feux[]{
-      new Feux(50,50),
-      new Feux(200,300),
-      new Feux(150,350)
+      // Gare 1 - en haut au milieu 
+      new Feux(coordGare1[0]-29, coordGare1[1]-60), // feu1, gare 1 plus haut gauche 
+      new Feux(coordGare1[0]+15, coordGare1[1]-60), // feu2, gare 1 plus haut droite 
+      new Feux(coordGare1[0]-29, coordGare1[1]-20), // feu3, gare 1 haut gauche 
+      new Feux(coordGare1[0]+15, coordGare1[1]-20), // feu4, gare 1 haut droite
+      new Feux(coordGare1[0]-29, coordGare1[1]+20), // feu5, gare 1 bas gauche
+      new Feux(coordGare1[0]+15, coordGare1[1]+20), // feu6, gare 1 bas droite 
+      new Feux(coordGare1[0]-29, coordGare1[1]+60), // feu7, gare 1 plus bas gauche 
+      new Feux(coordGare1[0]+15, coordGare1[1]+60), // feu8, gare 1 plus bass droite
+      new Feux(coordGare1[0]-85, coordGare1[1]-10), // feu9 gare 1 entrée gauche 
+      new Feux(coordGare1[0]+85, coordGare1[1]-10), // feu10 gare 1 entrée droite
+      // Gare 2 - milieu droite
+      new Feux(coordGare2[0]+7, coordGare2[1]-60), // feu11, plus haut gauche 
+      new Feux(coordGare2[0]+7, coordGare2[1]-20), // feu12, haut gauche
+      new Feux(coordGare2[0]+7, coordGare2[1]+20), // feu13, bas gauche 
+      new Feux(coordGare2[0]+7, coordGare2[1]+60), // feu14, plus bad gauche 
+      new Feux(coordGare2[0]-90, coordGare2[1]), // feu15, entrée gauche
+      // Gare 3 - milieu gauche
+      new Feux(coordGare3[0]-29, coordGare3[1]-60), // feu16, plus haut gauche 
+      new Feux(coordGare3[0]-29, coordGare3[1]-20), // feu17, haut gauche
+      new Feux(coordGare3[0]-29, coordGare3[1]+20), // feu18, bas gauche 
+      new Feux(coordGare3[0]-29, coordGare3[1]+60), // feu19, plus bad gauche 
+      new Feux(coordGare3[0]+90, coordGare3[1]), // feu20, entrée droite
+      // SGare  - milieu bas
+      new Feux(coordSGare[0]-29, coordSGare[1]-40), // feu21,haut gauche
+      new Feux(coordSGare[0]+15, coordSGare[1]-40), // feu22, haut droite
+      new Feux(coordSGare[0]-29, coordSGare[1]+5), // feu21, bas gauche
+      new Feux(coordSGare[0]+15, coordSGare[1]+5), // feu22, bas droite
+      new Feux(coordSGare[0]-85, coordSGare[1]), // feu25, entrée gauche 
+      new Feux(coordSGare[0]+75, coordSGare[1]), // feu26, entrée droite
     };
     
 
