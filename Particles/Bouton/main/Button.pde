@@ -3,11 +3,7 @@ boolean rectOver = false;
 boolean overCircle = false;
 boolean boolCircle = false;
 
-public class bouton1(){
-  
-}
-
-boolean overStation(int x, int y, int getHeight, int getWidth) {
+boolean overStation(float x, float y, float getHeight, float getWidth) {
   if ((mouseX > x && mouseX < x + getHeight) && (mouseY > y && mouseY < y + getWidth)){
     return true;
   }{
@@ -15,7 +11,7 @@ boolean overStation(int x, int y, int getHeight, int getWidth) {
   }
 }
 
-public void updateStation(int getX, int getY, int getHeight, int getWidth){
+public void updateStation(float getX, float getY, float getHeight, float getWidth){
   if(overStation(getX, getY, getHeight, getWidth)){
     rectOver = true;
     
@@ -38,9 +34,24 @@ void mouseReleased(){
         aiguillage.switch_();
       }
     }
-    /*for(int gare1 : pgare1){
-      updateStation(gare1);
-    }*/
+    for(buttonG1 button : g1){
+      updateStation(button.x, button.y, 10, 10);
+      if(rectOver){
+        button.switch_();
+      }
+    }
+    for(buttonG2 button : g2){
+      updateStation(button.x, button.y, 10, 10);
+      if(rectOver){
+        button.switch_();
+      }
+    }
+    for(buttonG3 button : g3){
+      updateStation(button.x, button.y, 10, 10);
+      if(rectOver){
+        button.switch_();
+      }
+    }
 }
 
 boolean overCircle(float x, float y, int diameter) {

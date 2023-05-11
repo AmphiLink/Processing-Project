@@ -20,11 +20,34 @@
 
   public Aiguillage[] aiguillages;
   public Feux[] feux;
+  public buttonG1[] g1;
+  public buttonG2[] g2;
+  public buttonG3[] g3;
   public void setup(){
 
     size(1000,800);
     strokeWeight(2);  
-
+    
+     // Initialisation des boutons les différents gares
+     g1 = new buttonG1[]{
+       new buttonG1(coordGare1[0]-72, coordGare1[1]-65, 0),
+       new buttonG1(coordGare1[0]-72, coordGare1[1]-30, 1),
+       new buttonG1(coordGare1[0]-72, coordGare1[1]+5, 2),
+       new buttonG1(coordGare1[0]-72, coordGare1[1]+40, 3),
+     };
+     g2 = new buttonG2[]{
+       new buttonG2(coordGare2[0], coordGare2[1]+100, 0),
+       new buttonG2(coordGare2[0], coordGare2[1]+130, 1),
+       new buttonG2(coordGare2[0], coordGare2[1]+160, 2),
+       new buttonG2(coordGare2[0], coordGare2[1]+190, 3),
+     };
+     g3 = new buttonG3[]{
+       new buttonG3(coordGare3[0]+60, coordGare3[1]-64, 0),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]-34, 1),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]+7, 2),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]+42, 3),
+     };
+    
     feux = new Feux[]{
       // Gare 2 - en haut au milieu 
       new Feux( coordGare2[0]-32,  coordGare2[1]-60), // feu1, gare 1 plus haut gauche 
@@ -101,6 +124,15 @@
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
     gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 30, sgare);
     
+    for(buttonG1 button : g1){
+      button.draw();
+    }
+    for(buttonG2 button : g2){
+      button.draw();
+    }
+    for(buttonG3 button : g3){
+      button.draw();
+    }
 
     for ( Feux feu : feux){
       feu.draw();

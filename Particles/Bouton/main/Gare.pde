@@ -29,12 +29,14 @@ public class Gare{
       else if(gare[i] == 1){
         fill(170); 
         strokeWeight(1);
-        rect(x, y + espace, 25, 5);
+        stroke(255);
+        rect(x, y + espace, 25, -15);
       }
       else if(gare[i] == 2){
         fill(160); 
         strokeWeight(1);
-        rect(x, y + espace, 25, 5);
+        stroke(255);
+        rect(x, y + espace, 25, -15);
       }
       espace = espace + 36;
     }
