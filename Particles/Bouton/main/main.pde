@@ -42,10 +42,10 @@
        new buttonG2(coordGare2[0], coordGare2[1]+190, 3),
      };
      g3 = new buttonG3[]{
-       new buttonG3(coordGare3[0]+60, coordGare3[1]-64, 0),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]-34, 1),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]+7, 2),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]+42, 3),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]-65, 0),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]-27, 1),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]+14, 2),
+       new buttonG3(coordGare3[0]+60, coordGare3[1]+55, 3),
      };
     
     feux = new Feux[]{
