@@ -9,10 +9,10 @@ class Track {
     line(coordSGare[0]-50, coordSGare[1], coordGare1[0]+75, coordGare1[1]);
     line(coordGare3[0]-75, coordGare3[1], coordSGare[0], coordSGare[1]+50);
     
-    dessinTrain(coordGare2[0]+75, coordGare2[1], coordGare3[0]-75, coordGare3[1], P2ToP3);
-    dessinTrain(coordGare1[0]+75, coordGare1[1], coordGare2[0]-75, coordGare2[1]+95, P1ToP2);
-    dessinTrain(coordGare1[0]+75, coordGare1[1], coordSGare[0]-50, coordSGare[1], P1ToS1);
-    dessinTrain(coordSGare[0], coordSGare[1]+50, coordGare3[0]-75, coordGare3[1], S1ToP3);
+    dessinTrain(coordGare2[0]-75+130, coordGare2[1]-75+65, coordGare3[0]-75, coordGare3[1]-75+65, P2ToP3);
+    dessinTrain(coordGare1[0]-75+130, coordGare1[1]-75+65, coordGare2[0]-75, coordGare2[1]-75+65, P1ToP2);
+    dessinTrain(coordGare1[0]-75+130, coordGare1[1]-75+65, coordSGare[0]-75, coordSGare[1]-75+65, P1ToS1);
+    dessinTrain(coordSGare[0]-75+130, coordSGare[1]-75+65, coordGare3[0]-75, coordGare3[1]-75+65, S1ToP3);
     
   }
   
@@ -36,13 +36,13 @@ class Track {
         ty = y1;
       }
       if(i == 1){
-        tx = (x2 - x1)/2;
-        ty = (y2 - y1)/2;
+        tx = x1 + (x2 - x1)/2;
+        ty = y1 + (y2 - y1)/2;
       }
       if(voie[i] == 1){
         stroke(170); 
         strokeWeight(4);
-        //rotate(atan((y2 - y1)/(x2 - x1)));
+        //rotate(atan((y2 - y1)/(x2 - x1))); //chelou sui la
         rect(tx, ty, 100, 20);
       }
       else if(voie[i] == 2){

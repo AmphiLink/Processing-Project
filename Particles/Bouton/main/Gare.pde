@@ -9,7 +9,7 @@ public class Gare{
   void Sdraw(int x, int y, int[] gare) {
       fill(90); 
       strokeWeight(1);
-      rect(x - 75, y - 75, 130, 130); 
+      rect(x - 65, y - 75, 130, 130); 
   }
 
   void draw(int x, int y, int[] gare) {
@@ -24,17 +24,17 @@ public class Gare{
       if(gare[i] == 0){
         strokeWeight(4);
         stroke(255);
-        line(x, y + espace, x + 20, y + espace);
+        line(x, y + espace, x + 25, y + espace);
       }
       else if(gare[i] == 1){
         fill(170); 
         strokeWeight(1);
-        rect(x, y + espace, 20, 5);
+        rect(x, y + espace, 25, 5);
       }
       else if(gare[i] == 2){
         fill(160); 
         strokeWeight(1);
-        rect(x, y + espace, 20, 5);
+        rect(x, y + espace, 25, 5);
       }
       espace = espace + 36;
     }
