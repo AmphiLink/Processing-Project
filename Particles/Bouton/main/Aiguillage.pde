@@ -11,18 +11,9 @@ public class Aiguillage{
     this.reversed = reversed;
     versDroite = true;
   }
-
-  public void modifyAiguillage(Aiguillage aiguillages){
-    if(aiguillages.versDroite == true){
-      aiguillages.versDroite = false;
-    } else {
-      aiguillages.versDroite = true;
-    }
-  }
-
 public void draw(){
   
-  float length = 30;
+  float length = 25;
   float angle;
 
   if(versDroite){
@@ -37,7 +28,17 @@ public void draw(){
   
   stroke(0);
   strokeWeight(2);
+  stroke(#FFFFFF); 
   line(x,y,x + cos(angle) * length,y + sin(angle) * length);
   }
 
+
+  }
+
+public void modifyAiguillage(Aiguillage aiguillages){
+    if(aiguillages.versDroite == true){
+      aiguillages.versDroite = false;
+    } else {
+      aiguillages.versDroite = true;
+    }
 }

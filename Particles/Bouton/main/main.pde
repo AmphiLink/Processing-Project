@@ -60,13 +60,21 @@
     
 
     aiguillages = new Aiguillage[]{
+      // Gare 1
+      new Aiguillage(coordGare1[0]+65,coordGare1[1]-4,true),
+      new Aiguillage(coordGare1[0]+18,coordGare1[1]-30,true),
+      new Aiguillage(coordGare1[0]+18,coordGare1[1]+35,true),
+
+      // Gare 3 
+      new Aiguillage(coordGare3[0]-65,coordGare3[1]-4,false),
+      new Aiguillage(coordGare3[0]-20,coordGare3[1]-30,false),
+      new Aiguillage(coordGare3[0]-20,coordGare3[1]+35,false),
+
 
       // SGare 
-      new Aiguillage(coordSGare[0]-70,coordSGare[1]-20,false), // aiguillage13, gauche
-      new Aiguillage(coordSGare[0]+50,coordSGare[1]-20,true), // aiguillage13, droite
-
+      new Aiguillage(coordSGare[0]-72,coordSGare[1]-20,false), // aiguillage13, gauche
+      new Aiguillage(coordSGare[0]+52,coordSGare[1]-20,true), // aiguillage13, droite
     };
-
 
 
   }
@@ -98,5 +106,7 @@
       aiguillage.draw();
     }
   
+
   }
 //>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c
+
