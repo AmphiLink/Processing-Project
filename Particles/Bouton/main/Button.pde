@@ -1,4 +1,6 @@
 boolean circleOver = false;
+boolean overCircle = false;
+boolean boolCircle = false;
 
 boolean overStation(int x, int y, int getHeight, int getWidth) {
   if ((mouseX > x && mouseX < x + getHeight) && (mouseY > y && mouseY < y + getWidth)){
@@ -22,7 +24,7 @@ public void buttonStation(int getX, int getY, int getHeight, int getWidth){
   
 }
 
-boolean overCircle(int x, int y, int diameter) {
+boolean overCircle(float x, float y, int diameter) {
   float disX = x - mouseX;
   float disY = y - mouseY;
   if (sqrt(sq(disX) + sq(disY)) < diameter/2 ) {
@@ -32,44 +34,10 @@ boolean overCircle(int x, int y, int diameter) {
   }
 }
 
-public void buttonlight(int getX, int getY, int diameter){
-  pushStyle();
-  
-  
-  if(overCircle(getX, getY, diameter)){
-    fill(255, 80);
-  }
-   
-  ellipse(getX, getY, diameter, diameter);
-  noStroke();
-  
-  
-  popStyle();
-  
-}
-
-boolean reversed(){
-  if (mouseButton == LEFT){ 
-    return true;
-  }else{
-    return false;
-  }
-  
-}
-public void buttonTurnout(int x, int y, int diameter){
-  pushStyle();
-  
-  
+void update(float x, float y, int diameter, boolean vert){
   if(overCircle(x, y, diameter)){
-    if(reversed()){
-      x = x + 20;
-    }
-  }
-   
-  ellipse(x, y, diameter, diameter);
-  noStroke();
-  
-  
-  popStyle();
-  
+    circleOver = true;
+  }else{
+    circleOver = false;
+  } 
 }
