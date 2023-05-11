@@ -20,7 +20,6 @@ public class Gare{
   
   void plateformesDraw(int x, int y, int[] gare){
     int espace = 0;
-    println(gare[1]);
     for(int i = 0; i < gare.length; i++){
       if(gare[i] == 0){
         strokeWeight(4);

@@ -86,6 +86,8 @@ void draw(){
   int[] coordSGare = {500, 700}; 
   int[] coordGare3 = {100, 400};
   
+
+  public Aiguillage[] aiguillages;
   public Feux[] feux;
   public void setup(){
 
@@ -100,6 +102,12 @@ void draw(){
       new Feux(200,300),
       new Feux(150,350)
     };
+    
+
+    aiguillages = new Aiguillage[]{
+      new Aiguillage(100,100)
+    };
+
 
 
   }
@@ -127,6 +135,10 @@ void draw(){
 
     for ( Feux feu : feux){
       feu.draw();
+    }
+
+    for (Aiguillage aiguillage : aiguillages){
+      aiguillage.draw();
     }
   
   }
