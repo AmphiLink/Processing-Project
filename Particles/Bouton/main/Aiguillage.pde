@@ -1,3 +1,4 @@
+int diameterTurnout = 20;
 public class Aiguillage{
   
   boolean versDroite;
@@ -15,8 +16,8 @@ public class Aiguillage{
     versDroite = !versDroite;
   }
   public void draw(){
-    
-    float length = 25;
+    pushMatrix();
+    float length = 35;
     float angle;
   
     if(versDroite){
@@ -32,7 +33,16 @@ public class Aiguillage{
     stroke(0);
     strokeWeight(2);
     stroke(#FFFFFF); 
+    
+    //Apparition de l'aiguillage
     line(x,y,x + cos(angle) * length,y + sin(angle) * length);
+    
+    //Apparition du cercle pour le bouton
+    fill(#FFFFFF, 50);
+    noStroke();
+    ellipse(x, y, diameterTurnout, diameterTurnout);
+    
+    popMatrix();
    }
 
 

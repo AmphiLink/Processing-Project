@@ -35,7 +35,6 @@ public class Feux {// true = vert -- false == rouge
     }
     
     ellipse(x, y, diameterLight, diameterLight);
-    System.out.println();
     popMatrix();
   }
   

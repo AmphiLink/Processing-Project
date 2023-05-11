@@ -32,7 +32,7 @@ void mouseReleased(){
       }
     }
     for(Aiguillage aiguillage : aiguillages){
-      update(aiguillage.x, aiguillage.y, diameterLight, aiguillage.versDroite);
+      update(aiguillage.x, aiguillage.y, diameterTurnout, aiguillage.versDroite);
       if(circleOver){
         aiguillage.switch_();
       }
