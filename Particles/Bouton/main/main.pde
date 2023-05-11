@@ -156,7 +156,7 @@ void draw(){
     gares.plateformesDraw(coordGare3[0] - 60, coordGare3[1] - 50, pgare3);
     
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
-    gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 60, sgare);
+    gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 30, sgare);
     
 
     for ( Feux feu : feux){
