@@ -15,4 +15,15 @@ class Track {
     line(coordSGare[0]-50, coordSGare[1], coordGare3[0]+75, coordGare3[1]);
     line(coordGare2[0]-75, coordGare2[1], coordSGare[0], coordSGare[1]+50);
   }
+  
+  void moveTrain(int[] track){
+    if(track[0] == 1 && track[1] == 0){
+      track[0] = 0;
+      track[1] = 1;
+    }
+    else if(track[0] == 0 && track[1] == 2){
+      track[0] = 2;
+      track[1] = 0;
+    }
+  }
 }
