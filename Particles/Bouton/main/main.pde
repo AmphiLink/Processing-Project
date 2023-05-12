@@ -50,6 +50,8 @@
        new buttonMouvement(725, 575,11 ,"→" ), //P3toS1
        new buttonMouvement(275-35, 575, 12,"←"), // P1toS1
        new buttonMouvement(275, 575,13,"→" ), //P1toS1
+       new buttonMouvement(coordSGare[0]-35, coordSGare[1]-100, 14,"←"),
+       new buttonMouvement(coordSGare[0], coordSGare[1]-100, 15,"→"),
      };
      
      // Initialisation des boutons les différents gares

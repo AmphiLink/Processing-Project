@@ -174,6 +174,15 @@ public class buttonG3{
       else if(index == 13){
         tracks.moveTrain(P1ToS1);
       }
+      else if(index == 14){
+        events.sortirSGare(0,1);
+        events.sortirSGare(1,1);
+      }
+      else if(index == 15){
+        events.sortirSGare(0,3);
+        events.sortirSGare(1,3);
+      }
+
 
 
 
