@@ -24,9 +24,10 @@ public class buttonG1{
     stroke(0);
     strokeWeight(1);
     if(isPush){
-      state = 1;
+      pgare1[index] = 1;
     }
-    pgare1[index] = state; 
+    
+    isPush = false;
     fill(#EDF216);
     
     rect(x, y, 10, 10);
@@ -56,7 +57,7 @@ public class buttonG2{
   
 
   public void draw() {
-    pushMatrix();
+    pushStyle();
     stroke(0);
     strokeWeight(1);
     if(isPush){
@@ -65,8 +66,8 @@ public class buttonG2{
     pgare2[index] = state; 
     fill(#EDF216);
     
-    rect(x, y, 10, 10);
-    popMatrix();
+    rect(x, y, 20, 10);
+    popStyle();
   }
   
 }
@@ -92,7 +93,7 @@ public class buttonG3{
   
 
   public void draw() {
-    pushMatrix();
+    pushStyle();
     stroke(0);
     strokeWeight(1);
     if(isPush){
@@ -104,7 +105,42 @@ public class buttonG3{
     fill(#EDF216);
     
     rect(x, y, 10, 10);
-    popMatrix();
+    popStyle();
   }
   
 }
+  public class buttonSortie{
+  private float x;
+  private float y;
+  private float angle;
+  boolean isPush;
+  private int index;
+  private int state;
+  public buttonSortie(float x, float y, int index) {
+      this.x = x;
+      this.y = y;
+      isPush = true;
+      this.index = index;
+      state = 1;
+      
+    }
+      public void switch_(){
+        isPush = !isPush;
+      }
+      
+    
+      public void draw() {
+        pushStyle();
+        stroke(0);
+        strokeWeight(1);
+        if(isPush){
+          pgare1[index] = 0; 
+        }
+        isPush = false;
+        fill(#FFFFFF);
+        
+        rect(x, y, 30, 20);
+        popStyle();
+    }
+  
+  }

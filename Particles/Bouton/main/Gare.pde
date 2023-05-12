@@ -27,15 +27,13 @@ public class Gare{
         line(x, y + espace, x + 25, y + espace);
       }
       else if(gare[i] == 1){
-        fill(170); 
-        strokeWeight(1);
-        stroke(255);
+        strokeWeight(2);
+        stroke(225);
         rect(x, y + espace, 25, -15);
       }
       else if(gare[i] == 2){
-        fill(160); 
-        strokeWeight(1);
-        stroke(255);
+        strokeWeight(2);
+        stroke(225);
         rect(x, y + espace, 25, -15);
       }
       espace = espace + 36;

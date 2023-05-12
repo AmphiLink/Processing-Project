@@ -41,7 +41,7 @@ void mouseReleased(){
       }
     }
     for(buttonG2 button : g2){
-      updateStation(button.x, button.y, 10, 10);
+      updateStation(button.x, button.y, 20, 10);
       if(rectOver){
         button.switch_();
       }
@@ -50,6 +50,12 @@ void mouseReleased(){
       updateStation(button.x, button.y, 10, 10);
       if(rectOver){
         button.switch_();
+      }
+    }
+    for(buttonSortie buttons : sortie){
+      updateStation(buttons.x, buttons.y, 30, 20);
+      if(rectOver){
+        buttons.switch_();
       }
     }
 }

@@ -1,7 +1,7 @@
   Gare gares = new Gare();
   Track tracks = new Track();
   
-  int[] pgare1 = {1, 0, 1, 0};
+  int[] pgare1 = {0, 0, 1, 0};
   int[] pgare2 = {0, 0, 1, 0};
   int[] pgare3 = {0, 0, 0, 0};
   int[] sgare = {1, 1};
@@ -17,17 +17,26 @@
   int[] coordSGare = {500, 700}; 
   int[] coordGare1 = {100, 400};
   
-
   public Aiguillage[] aiguillages;
   public Feux[] feux;
+  
   public buttonG1[] g1;
   public buttonG2[] g2;
   public buttonG3[] g3;
+  
+  public buttonSortie[] sortie;
+  
+  
+  
   public void setup(){
 
     size(1000,800);
     strokeWeight(2);  
     
+     sortie = new buttonSortie[]{
+       new buttonSortie(coordGare1[0]-72, coordGare1[1]-100, 0),
+     };
+     
      // Initialisation des boutons les différents gares
      g1 = new buttonG1[]{
        new buttonG1(coordGare1[0]-72, coordGare1[1]-65, 0),
@@ -36,10 +45,10 @@
        new buttonG1(coordGare1[0]-72, coordGare1[1]+40, 3),
      };
      g2 = new buttonG2[]{
-       new buttonG2(coordGare2[0], coordGare2[1]+100, 0),
-       new buttonG2(coordGare2[0], coordGare2[1]+130, 1),
-       new buttonG2(coordGare2[0], coordGare2[1]+160, 2),
-       new buttonG2(coordGare2[0], coordGare2[1]+190, 3),
+       new buttonG2(coordGare2[0]-18, coordGare2[1]-70, 0),
+       new buttonG2(coordGare2[0]-18, coordGare2[1]-33, 1),
+       new buttonG2(coordGare2[0]-18, coordGare2[1]+2, 2),
+       new buttonG2(coordGare2[0]-18, coordGare2[1]+39, 3),
      };
      g3 = new buttonG3[]{
        new buttonG3(coordGare3[0]+60, coordGare3[1]-65, 0),
@@ -48,6 +57,7 @@
        new buttonG3(coordGare3[0]+60, coordGare3[1]+55, 3),
      };
     
+    // Initialisation des feux de signalisations
     feux = new Feux[]{
       // Gare 2 - en haut au milieu 
       new Feux( coordGare2[0]-32,  coordGare2[1]-60), // feu1, gare 1 plus haut gauche 
@@ -113,13 +123,13 @@
     //arc (400 , 450 , 700 , 700 , PI, PI*2);
     tracks.draw();
     gares.draw(coordGare2[0], coordGare2[1], pgare2);
-    gares.plateformesDraw(coordGare2[0] - 20, coordGare2[1] - 50, pgare2);
+    gares.plateformesDraw(coordGare2[0] - 20, coordGare2[1] - 40, pgare2);
     
     gares.draw(coordGare3[0], coordGare3[1], pgare3);
     gares.plateformesDraw(coordGare3[0] + 20, coordGare3[1] - 50, pgare3);
     
     gares.draw(coordGare1[0], coordGare1[1], pgare1);
-    gares.plateformesDraw(coordGare1[0] - 60, coordGare1[1] - 50, pgare1);
+    gares.plateformesDraw(coordGare1[0] - 58, coordGare1[1] - 50, pgare1);
     
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
     gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 30, sgare);
@@ -140,6 +150,9 @@
 
     for (Aiguillage aiguillage : aiguillages){
       aiguillage.draw();
+    }
+    for (buttonSortie button : sortie){
+      button.draw();
     }
   
 
