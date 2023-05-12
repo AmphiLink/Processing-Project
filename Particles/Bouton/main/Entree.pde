@@ -3,6 +3,7 @@ class Entree{
     //int index = 0;
     for(int i = 15; i <= 18; i++){
       if(pgare1[i - 15] != 0){feux[i].estVert = false;}
+      else{feux[i].estVert = true;}
     }
   }
   void feuxUpdateGare2(){
@@ -12,6 +13,10 @@ class Entree{
         feux[i].estVert = false;
         feux[i + 1].estVert = false;
       }
+      else{
+        feux[i].estVert = true;
+        feux[i + 1].estVert = true;
+      }
       index += 1;
     }
   }
@@ -19,6 +24,7 @@ class Entree{
     //int index = 0;
     for(int i = 10; i <= 13; i++){
       if(pgare3[i - 10] != 0){feux[i].estVert = false;}
+      else{feux[i].estVert = true;}
     }
   }
   void feuxUpdateSGare(){
@@ -27,6 +33,10 @@ class Entree{
       if(sgare[index] != 0){
         feux[i].estVert = false;
         feux[i + 1].estVert = false;
+      }
+      else{
+        feux[i].estVert = true;
+        feux[i + 1].estVert = true;
       }
       index += 1;
     }
