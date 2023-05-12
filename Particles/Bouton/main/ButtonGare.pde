@@ -133,16 +133,16 @@ public class buttonG3{
         events.sortirGare1(3);
       }
       else if(index == 1){
-        events.sortirGare2(0,1);
-        events.sortirGare2(1,1);
-        events.sortirGare2(2,1);
-        events.sortirGare2(3,1);
+        events.sortirGare2Vers1(0);
+        events.sortirGare2Vers1(1);
+        events.sortirGare2Vers1(2);
+        events.sortirGare2Vers1(3);
       } 
       else if(index == 2){
-        events.sortirGare2(0,3);
-        events.sortirGare2(1,3);
-        events.sortirGare2(2,3);
-        events.sortirGare2(3,3);
+        events.sortirGare2Vers3(0);
+        events.sortirGare2Vers3(1);
+        events.sortirGare2Vers3(2);
+        events.sortirGare2Vers3(3);
       } 
       else if(index == 3){
         events.sortirGare3(0);
@@ -175,12 +175,12 @@ public class buttonG3{
         tracks.moveTrain(P1ToS1);
       }
       else if(index == 14){
-        events.sortirSGare(0,1);
-        events.sortirSGare(1,1);
+        events.sortirSGareVersGare1(0);
+        events.sortirSGareVersGare1(1);
       }
       else if(index == 15){
-        events.sortirSGare(0,3);
-        events.sortirSGare(1,3);
+        events.sortirSGareVersGare3(0);
+        events.sortirSGareVersGare3(1);
       }
 
 

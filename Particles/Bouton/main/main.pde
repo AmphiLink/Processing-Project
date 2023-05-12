@@ -3,15 +3,15 @@
   Events events = new Events();
   
   int[] pgare1 = {0, 0, 1, 0};
-  int[] pgare2 = {0, 0, 0, 1};
+  int[] pgare2 = {1, 1, 1, 1};
   int[] pgare3 = {1, 0, 1, 1};
-  int[] sgare = {1, 1};
+  int[] sgare = {2, 1};
   
 
   int[] P1ToP2 = {0, 0};  
   int[] P2ToP3 = {0, 0};
   int[] P1ToS1 = {0, 0};
-  int[] S1ToP3 = {1, 0};
+  int[] S1ToP3 = {0, 0};
 
   int[] coordGare2 = {500, 100}; 
   int[] coordGare3 = {900, 400}; 
@@ -51,7 +51,7 @@
        new buttonMouvement(275-35, 575, 12,"←"), // P1toS1
        new buttonMouvement(275, 575,13,"→" ), //P1toS1
        new buttonMouvement(coordSGare[0]-35, coordSGare[1]-100, 14,"←"),
-       new buttonMouvement(coordSGare[0], coordSGare[1]-100, 15,"→"),
+       new buttonMouvement(coordSGare[0], coordSGare[1]-100, 15,"→")
      };
      
      // Initialisation des boutons les différents gares
@@ -126,8 +126,8 @@
       new Aiguillage(coordGare3[0]-20,coordGare3[1]-30,false),
       new Aiguillage(coordGare3[0]-20,coordGare3[1]+35,false),
       // SGare 
-      new Aiguillage(coordSGare[0]-72,coordSGare[1]-20,false), // aiguillage13, gauche
-      new Aiguillage(coordSGare[0]+52,coordSGare[1]-20,true), // aiguillage13, droite
+      new Aiguillage(coordSGare[0]-72,coordSGare[1]-20,false), // 12 aiguillage13, gauche
+      new Aiguillage(coordSGare[0]+52,coordSGare[1]-20,true), // 13 aiguillage14, droite
     };
 
 
