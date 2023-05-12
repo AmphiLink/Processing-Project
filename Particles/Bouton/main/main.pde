@@ -3,7 +3,7 @@
   Events events = new Events();
   
   int[] pgare1 = {0, 0, 1, 0};
-  int[] pgare2 = {1, 1, 1, 1};
+  int[] pgare2 = {2, 2, 2, 2};
   int[] pgare3 = {1, 0, 1, 1};
   int[] sgare = {2, 1};
   
