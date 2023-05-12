@@ -143,6 +143,7 @@ public class buttonG3{
         events.sortirGare1(1);
         events.sortirGare1(2);
         events.sortirGare1(3);
+        enter.feuxUpdateGare1();
       }
       else if(index == 1){
         events.sortirGare2Vers1(0);
@@ -168,22 +169,13 @@ public class buttonG3{
       else if(index == 5){
         tracks.moveTrain(P1ToP2);
       }
-      else if(index == 8){
+      else if(index == 8 || index == 9){
         tracks.moveTrain(P2ToP3);
       }
-      else if(index == 9){
-        tracks.moveTrain(P2ToP3);
-      }
-      else if(index == 10){
+      else if(index == 10 || index == 11){
         tracks.moveTrain(S1ToP3);
       }
-      else if(index == 11){
-        tracks.moveTrain(S1ToP3);
-      }
-      else if(index == 12){
-        tracks.moveTrain(P1ToS1);
-      }
-      else if(index == 13){
+      else if(index == 12 || index == 13){
         tracks.moveTrain(P1ToS1);
       }
       else if(index == 14){
@@ -193,6 +185,52 @@ public class buttonG3{
       else if(index == 15){
         events.sortirSGareVersGare3(0);
         events.sortirSGareVersGare3(1);
+      }
+
+      else if(index==16){
+        events.entreeGare1(0);
+        events.entreeGare1(1);
+        events.entreeGare1(2);
+        events.entreeGare1(3);
+      }
+      else if(index==17){
+        events.entreeGare1(0);
+        events.entreeGare1(1);
+        events.entreeGare1(2);
+        events.entreeGare1(3);
+      }
+
+      else if(index == 18){
+        events.entreeGare2Depuis1(0);
+        events.entreeGare2Depuis1(1);
+        events.entreeGare2Depuis1(2);
+        events.entreeGare2Depuis1(3);
+      }
+      else if(index == 19){
+        events.entreeGare2Depuis3(0);
+        events.entreeGare2Depuis3(1);
+        events.entreeGare2Depuis3(2);
+        events.entreeGare2Depuis3(3);
+      }
+      else if (index == 20){
+        events.entreeGare3(0);
+        events.entreeGare3(1);
+        events.entreeGare3(2);
+        events.entreeGare3(3);
+      }
+      else if (index == 21){
+        events.entreeGare3(0);
+        events.entreeGare3(1);
+        events.entreeGare3(2);
+        events.entreeGare3(3);
+      }
+      else if (index == 22){
+        events.entreeSGareDepuisG1(0);
+        events.entreeSGareDepuisG1(1);
+      } 
+      else if (index == 23){
+        events.entreeSGareDepuisG3(0);
+        events.entreeSGareDepuisG3(1);
       }
       
       enter.feuxUpdateGare1();

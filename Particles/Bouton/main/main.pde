@@ -4,9 +4,9 @@
   Entree enter = new Entree();
   
   int[] pgare1 = {0, 0, 1, 0};
-  int[] pgare2 = {2, 2, 2, 2};
+  int[] pgare2 = {0, 0, 0, 0};
   int[] pgare3 = {1, 0, 1, 1};
-  int[] sgare = {2, 1};
+  int[] sgare = {1, 0};
   
 
   int[] P1ToP2 = {0, 0};  
@@ -52,7 +52,18 @@
        new buttonMouvement(275-35, 575, 12,"←"), // P1toS1
        new buttonMouvement(275, 575,13,"→" ), //P1toS1
        new buttonMouvement(coordSGare[0]-35, coordSGare[1]-100, 14,"←"),
-       new buttonMouvement(coordSGare[0], coordSGare[1]-100, 15,"→")
+       new buttonMouvement(coordSGare[0], coordSGare[1]-100, 15,"→"),
+
+       // bouton entrée gare
+      new buttonMouvement(160,245,16,"Enter"), // entrée gare 1 par g2
+      new buttonMouvement(160,500,17,"Enter"), // entrée gare 1 par s1
+      new buttonMouvement(350,80,18,"Enter"), // entrée gare 2 par g1
+      new buttonMouvement(650,80,19,"Enter"), // entrée gare 2 par g3
+      new buttonMouvement(790,245,20,"Enter"), // entrée gare 3 par g2
+      new buttonMouvement(790,500,21,"Enter"), // entrée gare 3 par s
+      new buttonMouvement(350,675,22,"Enter"), // entrée gare s par g3
+      new buttonMouvement(650,675,23,"Enter"), // entrée gare s par g1
+
      };
      
      // Initialisation des boutons les différents gares
