@@ -32,24 +32,24 @@ class Events{
       case 3:
       switch(index){
         case 0:
-        if(aiguillages[3].versDroite == true && aiguillages[4].versDroite == true && feux[9].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[6].versDroite == true && aiguillages[7].versDroite == true && feux[9].estVert == true && pgare2[0] == 1){pgare2[0] = 0;P2ToP3[0] =1;}
         case 1:
-        if(aiguillages[3].versDroite == true && aiguillages[4].versDroite == false && feux[9].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[6].versDroite == true && aiguillages[7].versDroite == false && feux[9].estVert == true && pgare2[1] == 1){pgare2[1] = 0;P2ToP3[0] =1;}
         case 2:
-        if(aiguillages[3].versDroite == false && aiguillages[5].versDroite == true && feux[9].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[6].versDroite == false && aiguillages[8].versDroite == true && feux[9].estVert == true && pgare2[2] == 1){pgare2[2] = 0;P2ToP3[0] =1;}
         case 3:
-        if(aiguillages[3].versDroite == false && aiguillages[5].versDroite == false && feux[9].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[6].versDroite == false && aiguillages[8].versDroite == false && feux[9].estVert == true && pgare2[3] == 1){pgare2[3] = 0;P2ToP3[0] =1;}
       }
       case 1:
       switch(index){
         case 0:
-        if(aiguillages[6].versDroite == false && aiguillages[7].versDroite == false && feux[8].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == false && feux[8].estVert == true && pgare2[0] == 1 ){pgare2[0] = 0;P1ToP2[1] =1;}
         case 1:
-        if(aiguillages[6].versDroite == false && aiguillages[7].versDroite == true && feux[8].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == true && feux[8].estVert == true && pgare2[1] == 1){pgare2[1] = 0;P1ToP2[1] =1;}
         case 2:
-        if(aiguillages[6].versDroite == true && aiguillages[8].versDroite == false && feux[8].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == false && feux[8].estVert == true && pgare2[2] == 1){pgare2[2] = 0;P1ToP2[1] =1;}
         case 3:
-        if(aiguillages[6].versDroite == true && aiguillages[8].versDroite == true && feux[8].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == true && feux[8].estVert == true && pgare2[3] == 1){pgare2[3] = 0;P1ToP2[1] =1;}
       }
     }
   }
@@ -87,13 +87,13 @@ class Events{
   void sortirGare3(int index){
     switch(index){
         case 0:
-        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[14].estVert == true){gares.exitGare(pgare3, index);}
+        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[14].estVert == true && pgare3[0] == 1){pgare3[0] = 0;S1ToP3[1]=1;}
         case 1:
-        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == true && feux[14].estVert == true){gares.exitGare(pgare3, index);}
+        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == true && feux[14].estVert == true && pgare3[1] == 1){pgare3[1] = 0;S1ToP3[1]=1;}
         case 2:
-        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == false && feux[14].estVert == true){gares.exitGare(pgare3, index);}
+        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == false && feux[14].estVert == true && pgare3[2] == 1){pgare3[2] = 0;S1ToP3[1]=1;}
         case 3:
-        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[14].estVert == true){gares.exitGare(pgare3, index);}
+        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[14].estVert == true && pgare3[3] == 1){pgare3[3] = 0;S1ToP3[1]=1;}
     }
   }
   void entreeGare3(int index){
@@ -111,21 +111,22 @@ class Events{
     }
   }
   
+  // 1 vers gare 1 / 3 vers gare 3 
   void sortirSGare(int index, int destination){
     switch(destination){
       case 1:
       switch(index){
         case 0:
-        if(aiguillages[12].versDroite == false && feux[24].estVert == true){gares.exitGare(pgare2, index);} 
+        if(aiguillages[12].versDroite == false && feux[24].estVert == true && sgare[0] == 1){sgare[0] = 0;P1ToS1[1]=1;} 
         case 1:
-        if(aiguillages[12].versDroite == true && feux[24].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[12].versDroite == true && feux[24].estVert == true && sgare[1] == 1){sgare[1] = 0;P1ToS1[1]=1;}
       }
       case 3:
       switch(index){
         case 0:
-        if(aiguillages[13].versDroite == true && feux[25].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[13].versDroite == true && feux[25].estVert == true && sgare[0] == 1){sgare[0] = 0;S1ToP3[0]=1;}
         case 1:
-        if(aiguillages[13].versDroite == false && feux[25].estVert == true){gares.exitGare(pgare2, index);}
+        if(aiguillages[13].versDroite == false && feux[25].estVert == true && sgare[1] == 1){sgare[1] = 0;S1ToP3[0]=1;}
       }
     }
   }

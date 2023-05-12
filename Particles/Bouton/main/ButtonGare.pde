@@ -125,51 +125,60 @@ public class buttonG3{
         strokeWeight(1);
       
         if(isPush){
-          // Event pour bouton de sortie de gare 
-          if(index == 0){
-            events.sortirGare1(0);
-            events.sortirGare1(1);
-            events.sortirGare1(2);
-            events.sortirGare1(3);
-          }
-          else if(index == 1){
-            events.sortirGare2(0,1);
-            events.sortirGare2(1,1);
-            events.sortirGare2(2,1);
-            events.sortirGare2(3,1);
-          } 
-          else if(index == 2){
-            events.sortirGare2(0,3);
-            events.sortirGare2(1,3);
-            events.sortirGare2(2,3);
-            events.sortirGare2(3,3);
-          } 
-          else if(index == 3){
-            events.sortirGare3(0);
-            events.sortirGare3(1);
-            events.sortirGare3(2);
-            events.sortirGare3(3);
-          } 
-          else if(index == 4){
-            tracks.moveTrain(P1ToP2);
-          }
-          else if(index == 5){
-            tracks.moveTrain(P1ToP2);
-          }
-          else if(index == 8){
-            tracks.moveTrain(P2ToP3);
-          }
-          else if(index == 9){
-            tracks.moveTrain(P2ToP3);
-          }
-
-
-        }
+      // Event pour bouton de sortie de gare 
+      if(index == 0){
+        events.sortirGare1(0);
+        events.sortirGare1(1);
+        events.sortirGare1(2);
+        events.sortirGare1(3);
+      }
+      else if(index == 1){
+        events.sortirGare2(0,1);
+        events.sortirGare2(1,1);
+        events.sortirGare2(2,1);
+        events.sortirGare2(3,1);
+      } 
+      else if(index == 2){
+        events.sortirGare2(0,3);
+        events.sortirGare2(1,3);
+        events.sortirGare2(2,3);
+        events.sortirGare2(3,3);
+      } 
+      else if(index == 3){
+        events.sortirGare3(0);
+        events.sortirGare3(1);
+        events.sortirGare3(2);
+        events.sortirGare3(3);
+      } 
+      else if(index == 4){
+        tracks.moveTrain(P1ToP2);
+      }
+      else if(index == 5){
+        tracks.moveTrain(P1ToP2);
+      }
+      else if(index == 8){
+        tracks.moveTrain(P2ToP3);
+      }
+      else if(index == 9){
+        tracks.moveTrain(P2ToP3);
+      }
+      else if(index == 10){
+        tracks.moveTrain(S1ToP3);
+      }
+      else if(index == 11){
+        tracks.moveTrain(S1ToP3);
+      }
+      else if(index == 12){
+        tracks.moveTrain(P1ToS1);
+      }
+      else if(index == 13){
+        tracks.moveTrain(P1ToS1);
+      }
 
 
 
         // Event pour bouton de rentrée de gare 
-
+        }
 
 
         isPush = false;
@@ -184,4 +193,4 @@ public class buttonG3{
 
   
   }
-  
+
