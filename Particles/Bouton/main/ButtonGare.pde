@@ -170,17 +170,17 @@ public class buttonG3{
                 stateTrain = true;
               }
           } else if(index == 3){
-              if(aiguillages[9].versDroite && aiguillages[10].versDroite && pgare3[3] == 1){
+              if(aiguillages[9].versDroite && aiguillages[11].versDroite && pgare3[3] == 1){
                 pgare3[3] = 0; 
                 stateTrain = true;
-              }else if(aiguillages[9].versDroite && aiguillages[10].versDroite == false && pgare3[2] == 1){
+              }else if(aiguillages[9].versDroite && aiguillages[11].versDroite == false && pgare3[2] == 1){
                 pgare3[2] = 0;
                 stateTrain = true;
-              }else if(aiguillages[9].versDroite == false && aiguillages[11].versDroite && pgare3[3] == 1){
-                pgare3[3] = 0;
+              }else if(aiguillages[9].versDroite == false && aiguillages[10].versDroite && pgare3[1] == 1){
+                pgare3[1] = 0;
                 stateTrain = true;
-              }else if(aiguillages[9].versDroite == false && aiguillages[11].versDroite == false && pgare3[3] == 1){
-                pgare3[3] = 0;
+              }else if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && pgare3[0] == 1){
+                pgare3[0] = 0;
                 stateTrain = true;
               }
           }
@@ -194,6 +194,7 @@ public class buttonG3{
             P2ToP3[0] = 1;
         } else if (stateTrain && index == 3){
             P2ToP3[1] = 1;
+            S1ToP3[1] = 1;
         }
         isPush = false;
         stateTrain = false;
