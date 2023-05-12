@@ -1,7 +1,6 @@
 public class buttonG1{
   private float x;
   private float y;
-  private float angle;
   boolean isPush;
   private int index;
   
@@ -35,7 +34,6 @@ public class buttonG1{
 public class buttonG2{
   private float x;
   private float y;
-  private float angle;
   boolean isPush;
   private int index;
   
@@ -69,7 +67,6 @@ public class buttonG2{
 public class buttonG3{
   private float x;
   private float y;
-  private float angle;
   boolean isPush;
   private int index;
   
@@ -103,7 +100,6 @@ public class buttonG3{
   public class buttonSortie{
   private float x;
   private float y;
-  private float angle;
   boolean isPush;
   private boolean stateTrain = false;
   private boolean stateTrain2 = false;
