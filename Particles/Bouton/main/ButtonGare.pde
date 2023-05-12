@@ -131,13 +131,13 @@ public class buttonG3{
     
 
 
-      public void draw() {
-        pushStyle();
-        stroke(0);
-        strokeWeight(1);
-      
-        if(isPush){
-      // Event pour bouton de sortie de gare 
+  public void draw() {
+    pushStyle();
+    stroke(0);
+    strokeWeight(1);
+    
+    if(isPush){
+    // Event pour bouton de sortie de gare 
       if(index == 0){
         events.sortirGare1(0);
         events.sortirGare1(1);
@@ -194,29 +194,30 @@ public class buttonG3{
         events.sortirSGareVersGare3(0);
         events.sortirSGareVersGare3(1);
       }
-
-
-
-
-        // Event pour bouton de rentrée de gare 
-        }
-
-
-        isPush = false;
-        noStroke();
-        if(overStation(x, y, 30, 20)){
-          fill(#FFFFFF,150);
-        }else{
-          fill(#FFFFFF, 255);
-        }
-        
-        rect(x, y, 30, 20);
-        fill(0);
-        textAlign(CENTER, CENTER);
-        textSize(15);
-        text(texte, x+14, y+10);
-        popStyle();
+      
+      enter.feuxUpdateGare1();
+      enter.feuxUpdateGare2();
+      enter.feuxUpdateGare3();
+      enter.feuxUpdateSGare();
+      // Event pour bouton de rentrée de gare 
     }
+  
+  
+      isPush = false;
+      noStroke();
+      if(overStation(x, y, 30, 20)){
+        fill(#FFFFFF,150);
+      }else{
+        fill(#FFFFFF, 255);
+      }
+      
+      rect(x, y, 30, 20);
+      fill(0);
+      textAlign(CENTER, CENTER);
+      textSize(15);
+      text(texte, x+14, y+10);
+      popStyle();
+  }
 
   
   }

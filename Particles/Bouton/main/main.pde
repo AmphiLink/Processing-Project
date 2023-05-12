@@ -1,6 +1,7 @@
   Gare gares = new Gare();
   Track tracks = new Track();
   Events events = new Events();
+  Entree enter = new Entree();
   
   int[] pgare1 = {0, 0, 1, 0};
   int[] pgare2 = {2, 2, 2, 2};
@@ -171,6 +172,9 @@
     for (buttonMouvement button : sortie){
       button.draw();
     }
-  
+    enter.feuxUpdateGare1();
+    enter.feuxUpdateGare2();
+    enter.feuxUpdateGare3();
+    enter.feuxUpdateSGare();
 
   }
