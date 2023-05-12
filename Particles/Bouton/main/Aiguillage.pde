@@ -38,7 +38,11 @@ public class Aiguillage{
     line(x,y,x + cos(angle) * length,y + sin(angle) * length);
     
     //Apparition du cercle pour le bouton
-    fill(#FFFFFF, 50);
+    if(overCircle(x, y, diameterTurnout)){
+          fill(#FFFFFF,30);
+    }else{
+          fill(#FFFFFF, 80);
+    }
     noStroke();
     ellipse(x, y, diameterTurnout, diameterTurnout);
     

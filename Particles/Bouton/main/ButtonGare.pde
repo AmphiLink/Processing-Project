@@ -24,7 +24,11 @@ public class buttonG1{
     }
     
     isPush = false;
-    fill(#EDF216);
+    if(overStation(x, y, 10, 10)){
+          fill(#EDF216,150);
+    }else{
+          fill(#EDF216, 255);
+    }
     
     rect(x, y, 10, 10);
     popMatrix();
@@ -57,7 +61,11 @@ public class buttonG2{
       pgare2[index] = 1;
     }
     isPush = false;
-    fill(#EDF216);
+    if(overStation(x, y, 20, 10)){
+          fill(#EDF216,150);
+    }else{
+          fill(#EDF216, 255);
+    }
     
     rect(x, y, 20, 10);
     popStyle();
@@ -90,7 +98,11 @@ public class buttonG3{
       pgare3[index] = 1;
     }
     isPush = false;
-    fill(#EDF216);
+    if(overStation(x, y, 10, 10)){
+          fill(#EDF216,150);
+    }else{
+          fill(#EDF216, 255);
+    }
     
     rect(x, y, 10, 10);
     popStyle();
@@ -191,7 +203,13 @@ public class buttonG3{
 
 
         isPush = false;
-        fill(#FFFFFF);
+        noStroke();
+        if(overStation(x, y, 30, 20)){
+          fill(#FFFFFF,150);
+        }else{
+          fill(#FFFFFF, 255);
+        }
+        
         rect(x, y, 30, 20);
         fill(0);
         textAlign(CENTER, CENTER);
@@ -202,4 +220,3 @@ public class buttonG3{
 
   
   }
-
