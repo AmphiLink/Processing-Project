@@ -53,7 +53,7 @@ void mouseReleased(){
         button.switch_();
       }
     }
-    for(buttonSortie buttons : sortie){
+    for(buttonMouvement buttons : sortie){
       updateStation(buttons.x, buttons.y, 30, 20);
       if(rectOver){
         buttons.switch_();

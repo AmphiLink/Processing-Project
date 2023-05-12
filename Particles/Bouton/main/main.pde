@@ -24,7 +24,7 @@
   public buttonG2[] g2;
   public buttonG3[] g3;
   
-  public buttonSortie[] sortie;
+  public buttonMouvement[] sortie;
   
   
   
@@ -33,12 +33,22 @@
     size(1000,800);
     strokeWeight(2);  
     
-     sortie = new buttonSortie[]{
+     sortie = new buttonMouvement[]{
        //Gare 1 
-       new buttonSortie(coordGare1[0]+45, coordGare1[1]-100, 0), //72
-       new buttonSortie(coordGare2[0]-35, coordGare2[1]+80, 1),
-       new buttonSortie(coordGare2[0], coordGare2[1]+80, 2),
-       new buttonSortie(coordGare3[0]-75, coordGare3[1]-100, 3),
+       new buttonMouvement(coordGare1[0]+45, coordGare1[1]-100, 0,"→"), // regarder index  //72
+       new buttonMouvement(coordGare1[0]+10, coordGare1[1]-100, 6,"←"), // in G1
+       new buttonMouvement(coordGare2[0]-35, coordGare2[1]+80, 1,"←"), // out gauche G2
+       new buttonMouvement(coordGare2[0], coordGare2[1]+80, 2,"→"), // out droit G2
+       new buttonMouvement(coordGare3[0]-75, coordGare3[1]-100, 3,"←"), // int G3
+       new buttonMouvement(coordGare3[0]-40, coordGare3[1]-100, 7,"→"), // out G3
+       new buttonMouvement(275-35, 200, 4,"←"), // P1toP2
+       new buttonMouvement(275, 200, 5,"→" ), //P1toP2
+       new buttonMouvement(725-35, 200, 8,"←"), // P2toP3
+       new buttonMouvement(725, 200, 9,"→" ), //P2toP3
+       new buttonMouvement(725-35, 575, 10,"←"), // P3toS1
+       new buttonMouvement(725, 575,11 ,"→" ), //P3toS1
+       new buttonMouvement(275-35, 575, 12,"←"), // P1toS1
+       new buttonMouvement(275, 575,13,"→" ), //P1toS1
      };
      
      // Initialisation des boutons les différents gares
@@ -155,7 +165,7 @@
     for (Aiguillage aiguillage : aiguillages){
       aiguillage.draw();
     }
-    for (buttonSortie button : sortie){
+    for (buttonMouvement button : sortie){
       button.draw();
     }
   

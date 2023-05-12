@@ -97,22 +97,25 @@ public class buttonG3{
   }
   
 }
-  public class buttonSortie{
+  public class buttonMouvement{
   private float x;
   private float y;
   boolean isPush;
   private int index;
+  private String texte;
   
-  public buttonSortie(float x, float y, int index) {
+  public buttonMouvement(float x, float y, int index, String texte) {
       this.x = x;
       this.y = y;
       isPush = false;
       this.index = index;
+      this.texte = texte;
     }
       public void switch_(){
         isPush = !isPush;
       }
       
+    
 
 
       public void draw() {
@@ -121,6 +124,7 @@ public class buttonG3{
         strokeWeight(1);
       
         if(isPush){
+          // Event pour bouton de sortie de gare 
           if(index == 0 && P1ToP2[0]  == 0){
             if(aiguillages[0].versDroite && aiguillages[1].versDroite && pgare1[0] == 1){
               pgare1[0] = 0; 
@@ -179,9 +183,20 @@ public class buttonG3{
               }
           }
         }
+
+
+
+        // Event pour bouton de rentrée de gare 
+
+
+
         isPush = false;
         fill(#FFFFFF);
         rect(x, y, 30, 20);
+        fill(0);
+        textAlign(CENTER, CENTER);
+        textSize(15);
+        text(texte, x+14, y+10);
         popStyle();
     }
 
