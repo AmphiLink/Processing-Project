@@ -2,14 +2,14 @@
   Track tracks = new Track();
   
   int[] pgare1 = {0, 0, 1, 0};
-  int[] pgare2 = {0, 0, 1, 0};
-  int[] pgare3 = {0, 0, 0, 0};
+  int[] pgare2 = {0, 0, 0, 1};
+  int[] pgare3 = {1, 1, 1, 1};
   int[] sgare = {1, 1};
   
 
-  int[] P1ToP2 = {1, 1};  
-  int[] P2ToP3 = {1, 1};
-  int[] P1ToS1 = {1, 1};
+  int[] P1ToP2 = {0, 0};  
+  int[] P2ToP3 = {0, 0};
+  int[] P1ToS1 = {0, 0};
   int[] S1ToP3 = {1, 1};
 
   int[] coordGare2 = {500, 100}; 
@@ -34,7 +34,11 @@
     strokeWeight(2);  
     
      sortie = new buttonSortie[]{
-       new buttonSortie(coordGare1[0]-72, coordGare1[1]-100, 0),
+       //Gare 1 
+       new buttonSortie(coordGare1[0]+45, coordGare1[1]-100, 0), //72
+       new buttonSortie(coordGare2[0]-35, coordGare2[1]+80, 1),
+       new buttonSortie(coordGare2[0], coordGare2[1]+80, 2),
+       new buttonSortie(coordGare3[0]-75, coordGare3[1]-100, 3),
      };
      
      // Initialisation des boutons les différents gares
@@ -103,7 +107,7 @@
       new Aiguillage(coordGare2[0]+45,coordGare2[1]+35,true),
       new Aiguillage(coordGare2[0]-71,coordGare2[1]-4,false),
       new Aiguillage(coordGare2[0]-50,coordGare2[1]-30,false),
-      new Aiguillage(coordGare2[0]-50,coordGare2[1]+35,false),
+      new Aiguillage(coordGare2[0]-50,coordGare2[1]+45,false),
       // Gare 3 
       new Aiguillage(coordGare3[0]-65,coordGare3[1]-4,false),
       new Aiguillage(coordGare3[0]-20,coordGare3[1]-30,false),
@@ -157,4 +161,3 @@
   
 
   }
-//>>>>>>> d3154952582d9f6e16ebf28ff3ba7c2e05540a4c

@@ -2,7 +2,8 @@ boolean circleOver = false;
 boolean rectOver = false;
 boolean overCircle = false;
 boolean boolCircle = false;
-
+int i = 0;
+public Events[] event;
 boolean overStation(float x, float y, float getHeight, float getWidth) {
   if ((mouseX > x && mouseX < x + getHeight) && (mouseY > y && mouseY < y + getWidth)){
     return true;
