@@ -127,9 +127,11 @@ public class buttonG3{
         if(isPush){
           // Event pour bouton de sortie de gare 
           if(index == 0){
-            for (int i = 0;i<=3; i++){
-            events.sortirGare1(i);}
-             }
+            events.sortirGare1(0);
+            events.sortirGare1(1);
+            events.sortirGare1(2);
+            events.sortirGare1(3);
+          }
           else if(index == 1){
             events.sortirGare2(0,1);
             events.sortirGare2(1,1);

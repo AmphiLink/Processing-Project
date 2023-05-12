@@ -45,6 +45,7 @@ public class Gare{
     int res = 0;
     if(gare[index] != 0){
       if(gare[index] == 2){
+        println(gare[index]);
         res = 2;
       }
       if(gare[index] == 1){
