@@ -27,9 +27,7 @@ class Events{
   }
   
   // destination = 1 pour aller à gare 1 et 3 pour aller à gare 3  
-  void sortirGare2(int index, int destination){
-    switch(destination){
-      case 3:
+  void sortirGare2Vers3(int index){
       switch(index){
         case 0:
         if(aiguillages[6].versDroite == true && aiguillages[7].versDroite == true && feux[9].estVert == true && pgare2[0] == 1){pgare2[0] = 0;P2ToP3[0] =1;}
@@ -40,20 +38,22 @@ class Events{
         case 3:
         if(aiguillages[6].versDroite == false && aiguillages[8].versDroite == false && feux[9].estVert == true && pgare2[3] == 1){pgare2[3] = 0;P2ToP3[0] =1;}
       }
-      case 1:
+  }
+  void sortirGare2Vers1(int index){
       switch(index){
         case 0:
-        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == false && feux[8].estVert == true && pgare2[0] == 1 ){pgare2[0] = 0;P1ToP2[1] =1;}
+        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == false && feux[8].estVert == true && pgare2[0] == 2 ){pgare2[0] = 0;P1ToP2[1] =1;}
         case 1:
-        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == true && feux[8].estVert == true && pgare2[1] == 1){pgare2[1] = 0;P1ToP2[1] =1;}
+        if(aiguillages[3].versDroite == false && aiguillages[4].versDroite == true && feux[8].estVert == true && pgare2[1] == 2){pgare2[1] = 0;P1ToP2[1] =1;}
         case 2:
-        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == false && feux[8].estVert == true && pgare2[2] == 1){pgare2[2] = 0;P1ToP2[1] =1;}
+        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == false && feux[8].estVert == true && pgare2[2] == 2){pgare2[2] = 0;P1ToP2[1] =1;}
         case 3:
-        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == true && feux[8].estVert == true && pgare2[3] == 1){pgare2[3] = 0;P1ToP2[1] =1;}
+        if(aiguillages[3].versDroite == true && aiguillages[5].versDroite == true && feux[8].estVert == true && pgare2[3] == 2){pgare2[3] = 0;P1ToP2[1] =1;}
       }
     }
   }
-    void entreeGare2(int index, int origine){
+    
+  void entreeGare2(int index, int origine){
     switch(origine){
       case 3:
       if(P1ToP2[1] == 1){
@@ -96,6 +96,7 @@ class Events{
         if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[14].estVert == true && pgare3[3] == 1){pgare3[3] = 0;S1ToP3[1]=1;}
     }
   }
+
   void entreeGare3(int index){
     if(P2ToP3[1] == 1 || S1ToP3[1] == 1){
       switch(index){
@@ -112,16 +113,15 @@ class Events{
   }
   
   // 1 vers gare 1 / 3 vers gare 3 
-  void sortirSGare(int index, int destination){
-    switch(destination){
-      case 1:
+  void sortirSGareVersGare1(int index){
       switch(index){
         case 0:
-        if(aiguillages[12].versDroite == false && feux[24].estVert == true && sgare[0] == 1){sgare[0] = 0;P1ToS1[1]=1;} 
+        if(aiguillages[12].versDroite == false && feux[24].estVert == true && sgare[0] == 2){sgare[0] = 0;P1ToS1[1]=1;} 
         case 1:
-        if(aiguillages[12].versDroite == true && feux[24].estVert == true && sgare[1] == 1){sgare[1] = 0;P1ToS1[1]=1;}
+        if(aiguillages[12].versDroite == true && feux[24].estVert == true && sgare[1] == 2){sgare[1] = 0;P1ToS1[1]=1;}
       }
-      case 3:
+  }
+  void sortirSGareVersGare3(int index){
       switch(index){
         case 0:
         if(aiguillages[13].versDroite == true && feux[25].estVert == true && sgare[0] == 1){sgare[0] = 0;S1ToP3[0]=1;}
@@ -129,7 +129,7 @@ class Events{
         if(aiguillages[13].versDroite == false && feux[25].estVert == true && sgare[1] == 1){sgare[1] = 0;S1ToP3[0]=1;}
       }
     }
-  }
+
   void entreeSGare(int index, int destination){
     switch(destination){
       case 1:
@@ -152,4 +152,3 @@ class Events{
       }
     }
   }
-}
