@@ -2,13 +2,13 @@ class Events{
   void sortirGare1(int index){
     switch(index){
       case 0:
-      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == true && feux[19].estVert == true){gares.exitGare(pgare1, index);}
+      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == true && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, index);}
       case 1:
-      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == false && feux[19].estVert == true){gares.exitGare(pgare1, index);}
+      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == false && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, index);}
       case 2:
-      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == true && feux[19].estVert == true){gares.exitGare(pgare1, index);}
+      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == true && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, index);}
       case 3:
-      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == false && feux[19].estVert == true){gares.exitGare(pgare1, index);}
+      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == false && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, index);}
     }
   }
   void entreeGare1(int index){

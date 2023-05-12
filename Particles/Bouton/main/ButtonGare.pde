@@ -98,6 +98,7 @@ public class buttonG3{
   
 }
   public class buttonMouvement{
+  
   private float x;
   private float y;
   boolean isPush;
@@ -125,63 +126,42 @@ public class buttonG3{
       
         if(isPush){
           // Event pour bouton de sortie de gare 
-          if(index == 0 && P1ToP2[0]  == 0){
-            if(aiguillages[0].versDroite && aiguillages[1].versDroite && pgare1[0] == 1){
-              pgare1[0] = 0; 
-              P1ToP2[0] = 1;
-            }else if(aiguillages[0].versDroite && aiguillages[1].versDroite == false && pgare1[1] == 1){
-              pgare1[1] = 0;
-              P1ToP2[0] = 1;
-            }else if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == true && pgare1[2] == 1){
-              pgare1[2] = 0;
-              P1ToP2[0] = 1;
-            }else if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == false && pgare1[3] == 1){
-              pgare1[3] = 0;
-              P1ToP2[0] = 1;
-            }  
-          } else if(index == 1 && P1ToP2[1]  == 0){
-              if(aiguillages[6].versDroite && aiguillages[7].versDroite && pgare2[3] == 1){
-                pgare2[3] = 0; 
-                P1ToP2[1] = 1;
-              }else if(aiguillages[6].versDroite && aiguillages[7].versDroite == false && pgare2[2] == 1){
-                pgare2[2] = 0;
-                P1ToP2[1] = 1;
-              }else if(aiguillages[6].versDroite == false && aiguillages[8].versDroite == true && pgare2[1] == 1){
-                pgare2[1] = 0;
-                P1ToP2[1] = 1;
-              }else if(aiguillages[6].versDroite == false && aiguillages[8].versDroite == false && pgare2[0] == 1){
-                pgare2[0] = 0;
-                P1ToP2[1] = 1;
-              }
-          } else if(index == 2 && P2ToP3[0]  == 0 ){
-              if(aiguillages[3].versDroite && aiguillages[4].versDroite && pgare2[0] == 1){
-                pgare2[0] = 0; 
-                P2ToP3[0] = 1;
-              }else if(aiguillages[3].versDroite && aiguillages[4].versDroite == false && pgare2[1] == 1){
-                pgare2[1] = 0;
-                P2ToP3[0] = 1;
-              }else if(aiguillages[3].versDroite == false && aiguillages[5].versDroite == true && pgare2[2] == 1){
-                pgare2[2] = 0;
-                P2ToP3[0] = 1;
-              }else if(aiguillages[3].versDroite == false && aiguillages[5].versDroite == false && pgare2[3] == 1){
-                pgare2[3] = 0;
-                P2ToP3[0] = 1;
-              }
-          } else if(index == 3 && S1ToP3[1]  == 0 ){
-              if(aiguillages[9].versDroite && aiguillages[11].versDroite && pgare3[3] == 1){
-                pgare3[3] = 0; 
-                S1ToP3[1] = 1;
-              }else if(aiguillages[9].versDroite && aiguillages[11].versDroite == false && pgare3[2] == 1){
-                pgare3[2] = 0;
-                S1ToP3[1] = 1;
-              }else if(aiguillages[9].versDroite == false && aiguillages[10].versDroite && pgare3[1] == 1){
-                pgare3[1] = 0;
-                S1ToP3[1] = 1;
-              }else if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && pgare3[0] == 1){
-                pgare3[0] = 0;
-                S1ToP3[1] = 1;
-              }
+          if(index == 0){
+            for (int i = 0;i<=3; i++){
+            events.sortirGare1(i);}
+             }
+          else if(index == 1){
+            events.sortirGare2(0,1);
+            events.sortirGare2(1,1);
+            events.sortirGare2(2,1);
+            events.sortirGare2(3,1);
+          } 
+          else if(index == 2){
+            events.sortirGare2(0,3);
+            events.sortirGare2(1,3);
+            events.sortirGare2(2,3);
+            events.sortirGare2(3,3);
+          } 
+          else if(index == 3){
+            events.sortirGare3(0);
+            events.sortirGare3(1);
+            events.sortirGare3(2);
+            events.sortirGare3(3);
+          } 
+          else if(index == 4){
+            tracks.moveTrain(P1ToP2);
           }
+          else if(index == 5){
+            tracks.moveTrain(P1ToP2);
+          }
+          else if(index == 8){
+            tracks.moveTrain(P2ToP3);
+          }
+          else if(index == 9){
+            tracks.moveTrain(P2ToP3);
+          }
+
+
         }
 
 
