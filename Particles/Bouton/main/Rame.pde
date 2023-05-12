@@ -2,13 +2,13 @@ class Events{
   void sortirGare1(int index){
     switch(index){
       case 0:
-      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == true && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, 0);}
+      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == true && feux[19].estVert == true && pgare1[0] == 1){pgare1[0] =0;P1ToP2[0] = 1;}
       case 1:
-      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == false && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, 1);}
+      if(aiguillages[0].versDroite == true && aiguillages[1].versDroite == false && feux[19].estVert == true && pgare1[1] == 1){pgare1[1] =0;P1ToP2[0]= 1;}
       case 2:
-      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == true && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, 2);}
+      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == true && feux[19].estVert == true && pgare1[2] == 1){pgare1[2] =0;P1ToP2[0]= 1;}
       case 3:
-      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == false && feux[19].estVert == true){P1ToP2[0] = gares.exitGare(pgare1, 3); println(P1ToP2[0]);}
+      if(aiguillages[0].versDroite == false && aiguillages[2].versDroite == false && feux[19].estVert == true && pgare1[3] == 1){pgare1[3] =0;P1ToP2[0]= 1;}
     }
   }
   void entreeGare1(int index){
