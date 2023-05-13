@@ -22,10 +22,6 @@
   public Aiguillage[] aiguillages;
   public Feux[] feux;
   
-  public buttonG1[] g1;
-  public buttonG2[] g2;
-  public buttonG3[] g3;
-  
   public buttonMouvement[] sortie;
   
   
@@ -66,25 +62,6 @@
 
      };
      
-     // Initialisation des boutons les différents gares
-     g1 = new buttonG1[]{
-       new buttonG1(coordGare1[0]-72, coordGare1[1]-65, 0),
-       new buttonG1(coordGare1[0]-72, coordGare1[1]-30, 1),
-       new buttonG1(coordGare1[0]-72, coordGare1[1]+5, 2),
-       new buttonG1(coordGare1[0]-72, coordGare1[1]+40, 3),
-     };
-     g2 = new buttonG2[]{
-       new buttonG2(coordGare2[0]-18, coordGare2[1]-70, 0),
-       new buttonG2(coordGare2[0]-18, coordGare2[1]-33, 1),
-       new buttonG2(coordGare2[0]-18, coordGare2[1]+2, 2),
-       new buttonG2(coordGare2[0]-18, coordGare2[1]+39, 3),
-     };
-     g3 = new buttonG3[]{
-       new buttonG3(coordGare3[0]+60, coordGare3[1]-65, 0),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]-27, 1),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]+14, 2),
-       new buttonG3(coordGare3[0]+60, coordGare3[1]+55, 3),
-     };
     
     // Initialisation des feux de signalisations
     feux = new Feux[]{
@@ -163,16 +140,6 @@
     gares.Sdraw(coordSGare[0], coordSGare[1], sgare);
     gares.plateformesDraw(coordSGare[0] - 20, coordSGare[1] - 30, sgare);
     
-    for(buttonG1 button : g1){
-      button.draw();
-    }
-    for(buttonG2 button : g2){
-      button.draw();
-    }
-    for(buttonG3 button : g3){
-      button.draw();
-    }
-
     for ( Feux feu : feux){
       feu.draw();
     }

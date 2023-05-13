@@ -35,24 +35,6 @@ void mouseReleased(){
         aiguillage.switch_();
       }
     }
-    for(buttonG1 button : g1){
-      updateStation(button.x, button.y, 10, 10);
-      if(rectOver){
-        button.switch_();
-      }
-    }
-    for(buttonG2 button : g2){
-      updateStation(button.x, button.y, 20, 10);
-      if(rectOver){
-        button.switch_();
-      }
-    }
-    for(buttonG3 button : g3){
-      updateStation(button.x, button.y, 10, 10);
-      if(rectOver){
-        button.switch_();
-      }
-    }
     for(buttonMouvement buttons : sortie){
       updateStation(buttons.x, buttons.y, 30, 20);
       if(rectOver){
