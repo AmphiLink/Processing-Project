@@ -34,11 +34,9 @@
      sortie = new buttonMouvement[]{
        //Gare 1 
        new buttonMouvement(coordGare1[0]+45, coordGare1[1]-100, 0,"→"), // regarder index  //72
-       new buttonMouvement(coordGare1[0]+10, coordGare1[1]-100, 6,"←"), // in G1
        new buttonMouvement(coordGare2[0]-35, coordGare2[1]+80, 1,"←"), // out gauche G2
        new buttonMouvement(coordGare2[0], coordGare2[1]+80, 2,"→"), // out droit G2
        new buttonMouvement(coordGare3[0]-75, coordGare3[1]-100, 3,"←"), // out G3
-       new buttonMouvement(coordGare3[0]-40, coordGare3[1]-100, 7,"→"), // int G3
        new buttonMouvement(275-35, 200, 4,"←"), // P1toP2
        new buttonMouvement(275, 200, 5,"→" ), //P1toP2
        new buttonMouvement(725-35, 200, 8,"←"), // P2toP3
