@@ -152,5 +152,10 @@
     enter.feuxUpdateGare2();
     enter.feuxUpdateGare3();
     enter.feuxUpdateSGare();
-
+    enter.gare1sortie();
+    enter.gare2sortieG();
+    enter.gare2sortieD();
+    enter.gare3sortie();
+    enter.sgaresortieG();
+    enter.sgaresortieD();
   }
