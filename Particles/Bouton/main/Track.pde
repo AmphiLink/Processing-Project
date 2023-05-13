@@ -43,34 +43,40 @@ class Track {
         ty = y1 + (y2 - y1)/2;
       }
       if (voie[i] == 1 || voie[i] == 2) {
-    if (angle==true) {
-        stroke(170); 
-        strokeWeight(4);
-        pushMatrix();
-        translate(tx, ty);
-        rotate(radians(48));
-        rect(0, 0, 100, 20);
-        popMatrix();
-    } else {
-        stroke(160); 
-        strokeWeight(4);
-        pushMatrix();
-        translate(tx, ty);
-        rotate(radians(-48));
-        rect(0, 0, 100, 20);
-        popMatrix();
-    }
-}
-
-
-
-
-
-
-
-
-
+        if (angle==true) {
+          strokeWeight(4);
+          pushMatrix();
+          translate(tx, ty);
+          rotate(radians(48));
+            
+          if(voie[i] == 2){
+            stroke(#9E3939);
+            fill(#712929);
+          }
+          else{
+            stroke(#CFD83C);
+            fill(#767B23);
+          }
+          rect(0, 0, 100, 20);
+          popMatrix();
+      }else {
+        if(voie[i] == 2){
+            stroke(#9E3939);
+            fill(#712929);
+          }
+          else{
+            stroke(#CFD83C);
+            fill(#767B23);
+          }
+          strokeWeight(4);
+          pushMatrix();
+          translate(tx, ty);
+          rotate(radians(-48));
+          rect(0, 0, 100, 20);
+          popMatrix();
+          
+        }
+      }
     }
   }
-
 }

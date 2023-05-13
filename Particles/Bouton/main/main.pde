@@ -10,9 +10,9 @@
   
 
   int[] P1ToP2 = {0, 0};  
-  int[] P2ToP3 = {0, 0};
+  int[] P2ToP3 = {0, 1};
   int[] P1ToS1 = {0, 0};
-  int[] S1ToP3 = {0, 0};
+  int[] S1ToP3 = {0, 1};
 
   int[] coordGare2 = {500, 100}; 
   int[] coordGare3 = {900, 400}; 

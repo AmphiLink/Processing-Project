@@ -58,7 +58,7 @@ class Entree{
   
   void gare3sortie(){
     if(S1ToP3[0] != 0 || S1ToP3[1] != 0){
-      feux[19].estVert = false;
+      feux[14].estVert = false;
     }
     else{
       if(sgare[0] == 0 || sgare[1] == 0){

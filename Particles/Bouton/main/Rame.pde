@@ -96,18 +96,18 @@ class Events{
   void sortirGare3(int index){
     switch(index){
         case 0:
-        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[14].estVert == true && pgare3[0] == 1){pgare3[0] = 0;S1ToP3[1]=2;}
+        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[14].estVert == true && pgare3[0] == 1 && S1ToP3[1] == 0 ){pgare3[0] = 0;S1ToP3[1]=2;}
         case 1:
-        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == true && feux[14].estVert == true && pgare3[1] == 1){pgare3[1] = 0;S1ToP3[1]=2;}
+        if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == true && feux[14].estVert == true && pgare3[1] == 1 && S1ToP3[1] == 0){pgare3[1] = 0;S1ToP3[1]=2;}
         case 2:
-        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == false && feux[14].estVert == true && pgare3[2] == 1){pgare3[2] = 0;S1ToP3[1]=2;}
+        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == false && feux[14].estVert == true && pgare3[2] == 1 && S1ToP3[1] == 0){pgare3[2] = 0;S1ToP3[1]=2;}
         case 3:
-        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[14].estVert == true && pgare3[3] == 1){pgare3[3] = 0;S1ToP3[1]=2;}
+        if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[14].estVert == true && pgare3[3] == 1 && S1ToP3[1] == 0){pgare3[3] = 0;S1ToP3[1]=2;}
     }
   }
 
-  void entreeGare3(int index){
-    if(P2ToP3[1] == 1){
+  void entreeGare3(int index, int i){
+    if((P2ToP3[1] == 1 && i == 20 &&  S1ToP3[1] != 1)){
       switch(index){
           case 0:
           if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[10].estVert == true){P2ToP3[1]=0;pgare3[0] = 1;}
@@ -118,7 +118,7 @@ class Events{
           case 3:
           if(aiguillages[9].versDroite == true && aiguillages[11].versDroite == true && feux[13].estVert == true){P2ToP3[1]=0;pgare3[3] = 1;}
         } 
-      }else if (S1ToP3[1] == 1){
+      }else if (S1ToP3[1] == 1 && i == 21){
       switch(index){
           case 0:
           if(aiguillages[9].versDroite == false && aiguillages[10].versDroite == false && feux[10].estVert == true){S1ToP3[1]=0;pgare3[0] = 1;}

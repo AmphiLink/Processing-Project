@@ -102,16 +102,16 @@
         events.entreeGare2Depuis3(3);
       }
       else if (index == 20){
-        events.entreeGare3(0);
-        events.entreeGare3(1);
-        events.entreeGare3(2);
-        events.entreeGare3(3);
+        events.entreeGare3(0, index);
+        events.entreeGare3(1, index);
+        events.entreeGare3(2, index);
+        events.entreeGare3(3, index);
       }
       else if (index == 21){
-        events.entreeGare3(0);
-        events.entreeGare3(1);
-        events.entreeGare3(2);
-        events.entreeGare3(3);
+        events.entreeGare3(0, index);
+        events.entreeGare3(1, index);
+        events.entreeGare3(2, index);
+        events.entreeGare3(3, index);
       }
       else if (index == 22){
         events.entreeSGareDepuisG1(0);
