@@ -1,11 +1,8 @@
-
 int diameterLight = 15;
-
 
 public class Feux {// true = vert -- false == rouge
   private float x;
   private float y;
-  private float angle;
   boolean estVert;
   
   public Feux(float x, float y) {

@@ -1,4 +1,5 @@
 int diameterTurnout = 20;
+
 public class Aiguillage{
   
   boolean versDroite;
@@ -12,9 +13,11 @@ public class Aiguillage{
     this.reversed = reversed;
     versDroite = true;
   }
+  
   public void switch_(){
     versDroite = !versDroite;
   }
+  
   public void draw(){
     pushMatrix();
     float length = 33;

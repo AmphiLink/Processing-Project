@@ -1,4 +1,4 @@
-  public class buttonMouvement{
+public class buttonMouvement{
   
   private float x;
   private float y;
@@ -13,13 +13,11 @@
       this.index = index;
       this.texte = texte;
     }
-      public void switch_(){
-        isPush = !isPush;
-      }
-      
     
-
-
+  public void switch_(){
+    isPush = !isPush;
+  }
+      
   public void draw() {
     pushStyle();
     stroke(0);
@@ -128,8 +126,7 @@
       enter.feuxUpdateSGare();
       // Event pour bouton de rentrée de gare 
     }
-  
-  
+    
       isPush = false;
       noStroke();
       if(overStation(x, y, 40, 20)){
@@ -153,7 +150,5 @@
       }
       
       popStyle();
-  }
-
-  
-  }
+  }  
+}
