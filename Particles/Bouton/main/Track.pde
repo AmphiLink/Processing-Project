@@ -42,9 +42,11 @@ class Track {
         tx = x1 + (x2 - x1)/2;
         ty = y1 + (y2 - y1)/2;
       }
+      pushStyle();
+      strokeWeight(4);
       if (voie[i] == 1 || voie[i] == 2) {
         if (angle==true) {
-          strokeWeight(4);
+          
           pushMatrix();
           translate(tx, ty);
           rotate(radians(48));
@@ -68,7 +70,6 @@ class Track {
             stroke(#CFD83C);
             fill(#767B23);
           }
-          strokeWeight(4);
           pushMatrix();
           translate(tx, ty);
           rotate(radians(-48));
@@ -76,7 +77,9 @@ class Track {
           popMatrix();
           
         }
+        
       }
+      popStyle();
     }
   }
 }

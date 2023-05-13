@@ -58,7 +58,7 @@
       else if(index == 5){
         tracks.moveTrain(P1ToP2);
       }
-      else if(index == 8 || index == 9){
+      else if(index == 9){
         tracks.moveTrain(P2ToP3);
       }
       else if(index == 10 || index == 11){
@@ -132,17 +132,26 @@
   
       isPush = false;
       noStroke();
-      if(overStation(x, y, 30, 20)){
+      if(overStation(x, y, 40, 20)){
         fill(#FFFFFF,150);
       }else{
         fill(#FFFFFF, 255);
       }
       
-      rect(x, y, 30, 20);
-      fill(0);
+      
       textAlign(CENTER, CENTER);
       textSize(15);
-      text(texte, x+14, y+10);
+      
+      if(texte == "Enter"){
+        rect(x, y, 40, 20);
+        fill(0);
+        text(texte, x+20, y+8);
+      }else{
+        rect(x, y, 30, 20);
+        fill(0);
+        text(texte, x+17, y+8);
+      }
+      
       popStyle();
   }
 

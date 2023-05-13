@@ -1,3 +1,4 @@
+  
   Gare gares = new Gare();
   Track tracks = new Track();
   Events events = new Events();
@@ -10,7 +11,7 @@
   
 
   int[] P1ToP2 = {0, 0};  
-  int[] P2ToP3 = {0, 1};
+  int[] P2ToP3 = {1, 0};
   int[] P1ToS1 = {0, 0};
   int[] S1ToP3 = {0, 1};
 
