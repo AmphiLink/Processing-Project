@@ -132,7 +132,7 @@ public class buttonMouvement{
       noStroke();
       if(texte == "Enter"){ longueur = 40; } else { longueur = 30; } 
       
-      if(overStation(x, y, longueur, 20)){
+      if(overRect(x, y, longueur, 20)){
         fill(#FFFFFF,150);
       }else{
         fill(#FFFFFF, 255);
