@@ -36,7 +36,7 @@ void mouseReleased(){
       }
     }
     for(buttonMouvement buttons : sortie){
-      updateStation(buttons.x, buttons.y, 30, 20);
+      updateStation(buttons.x, buttons.y, 40, 20);
       if(rectOver){
         buttons.switch_();
       }

@@ -1,3 +1,4 @@
+int longueur = 30;
 public class buttonMouvement{
   
   private float x;
@@ -129,7 +130,9 @@ public class buttonMouvement{
     
       isPush = false;
       noStroke();
-      if(overStation(x, y, 40, 20)){
+      if(texte == "Enter"){ longueur = 40; } else { longueur = 30; } 
+      
+      if(overStation(x, y, longueur, 20)){
         fill(#FFFFFF,150);
       }else{
         fill(#FFFFFF, 255);
@@ -138,14 +141,12 @@ public class buttonMouvement{
       
       textAlign(CENTER, CENTER);
       textSize(15);
+      rect(x, y, longueur, 20);
+      fill(0);
       
       if(texte == "Enter"){
-        rect(x, y, 40, 20);
-        fill(0);
         text(texte, x+20, y+8);
       }else{
-        rect(x, y, 30, 20);
-        fill(0);
         text(texte, x+17, y+8);
       }
       
